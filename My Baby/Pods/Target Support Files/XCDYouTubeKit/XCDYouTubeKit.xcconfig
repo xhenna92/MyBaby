@@ -1,0 +1,1 @@
+XCDYOUTUBEKIT_OTHER_LDFLAGS = -framework "JavaScriptCore" -framework "MediaPlayer"
