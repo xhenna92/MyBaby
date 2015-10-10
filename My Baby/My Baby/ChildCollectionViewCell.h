@@ -10,4 +10,8 @@
 
 @interface ChildCollectionViewCell : UICollectionViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *childImageView;
+
+@property (strong, nonatomic) IBOutlet UILabel *childNameLabel;
+
 @end
