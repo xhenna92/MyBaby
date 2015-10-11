@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>JTCalendar.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00C15BDF9917F5A1DCB456C8D2384CFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1CCA33898E587AE27FE4D7B3EF115639</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29BCA86E9F565A01E67785AF1FF8F7FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -38,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>3DDF41ED2D44F52CCC3A5E0AEB89290D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>50B577ECC28B376BC4CDA1B7BCB8DEB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5FEF815360CFB7929B7C3E89304883A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

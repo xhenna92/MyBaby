@@ -7,6 +7,7 @@
 //
 
 #import "EventListViewController.h"
+//#import <Parse/Parse.h>
 
 @interface EventListViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerCalendarView;
@@ -21,7 +22,11 @@
     [super viewDidLoad];
     self.containerCalendarView.hidden = NO;
     self.containerListView.hidden = YES;
-    // Do any additional setup after loading the view.
+
+//    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+//        NSLog(@"%@", objects);
+//    }];
 }
 - (IBAction)calendarListSegmentedController:(UISegmentedControl *)sender {
 
