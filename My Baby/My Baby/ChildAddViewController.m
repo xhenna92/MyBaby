@@ -12,6 +12,8 @@
 @interface ChildAddViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (nonatomic) BOOL gender;
+@property (strong, nonatomic) IBOutlet UIDatePicker *childDOBDatePicker;
+@property (nonatomic) NSString *childDOBString;
 
 @end
 
@@ -19,9 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.childDOBDatePicker.datePickerMode = UIDatePickerModeDate;
 }
 
+
+#pragma mark - IBAction Interaction
+
+- (IBAction)childDOBPicker:(UIDatePicker *)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"MM-dd-yyyy"];
+    NSString *formatedDate = [dateFormatter stringFromDate: self.childDOBDatePicker.date];
+    self.childDOBString = formatedDate;
+}
 
 - (IBAction)genderSegmentedControl:(UISegmentedControl *)sender {
     
@@ -41,7 +52,7 @@
     Child *child = [[Child alloc] init];
     child.childName = self.nameTextField.text;
     child.childGender = self.gender;
-    
+    child.childDOB = self.childDOBString;
     [child saveInBackground];
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];

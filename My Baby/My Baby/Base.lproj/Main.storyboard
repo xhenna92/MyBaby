@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nyo-xB-PPe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nyo-xB-PPe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,20 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-2x-rbN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-2x-rbN">
                                 <rect key="frame" x="91" y="72" width="481" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-De-ePd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-De-ePd">
                                 <rect key="frame" x="20" y="76" width="63" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-dV-TKM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-dV-TKM">
                                 <rect key="frame" x="20" y="110" width="560" height="433"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,13 +254,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gax-7y-WId">
-                                <rect key="frame" x="24" y="72" width="552" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gax-7y-WId">
+                                <rect key="frame" x="28" y="72" width="544" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6jT-0F-oMa">
+                                <rect key="frame" x="0.0" y="151" width="600" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="466276388.74317002">
+                                    <!--2015-10-11 17:13:08 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="childDOBPicker:" destination="cBc-Y5-chh" eventType="valueChanged" id="jMS-h1-wqH"/>
+                                </connections>
+                            </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-zs-PM8">
-                                <rect key="frame" x="426" y="110" width="150" height="29"/>
+                                <rect key="frame" x="225" y="110" width="150" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="0gk-TE-9Ta"/>
                                 </constraints>
@@ -272,14 +285,26 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2mI-zs-PM8" firstAttribute="top" secondItem="gax-7y-WId" secondAttribute="bottom" constant="8" id="BeQ-RX-qiX"/>
                             <constraint firstItem="2mI-zs-PM8" firstAttribute="top" secondItem="gax-7y-WId" secondAttribute="bottom" constant="8" id="Jmm-El-RAy"/>
                             <constraint firstItem="gax-7y-WId" firstAttribute="top" secondItem="sZQ-zl-Sxi" secondAttribute="bottom" constant="8" id="Mhk-XA-U6V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2mI-zs-PM8" secondAttribute="trailing" constant="8" id="N1w-9M-jO0"/>
+                            <constraint firstItem="6jT-0F-oMa" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leading" id="UMI-ev-Eg2"/>
+                            <constraint firstAttribute="trailing" secondItem="6jT-0F-oMa" secondAttribute="trailing" id="ZFc-iu-NqX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gax-7y-WId" secondAttribute="trailing" constant="8" id="mAZ-Yl-SAm"/>
+                            <constraint firstItem="6jT-0F-oMa" firstAttribute="top" secondItem="2mI-zs-PM8" secondAttribute="bottom" constant="13" id="wIz-S8-yk0"/>
                             <constraint firstItem="gax-7y-WId" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leadingMargin" constant="8" id="yhN-qc-Qn5"/>
+                            <constraint firstItem="2mI-zs-PM8" firstAttribute="centerX" secondItem="AHj-1L-SGk" secondAttribute="centerX" id="zk2-hK-adX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jmm-El-RAy"/>
+                                <exclude reference="N1w-9M-jO0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="3K8-C2-lMs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iyO-Wk-PZN">
@@ -294,6 +319,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="childDOBDatePicker" destination="6jT-0F-oMa" id="a9p-QM-jQy"/>
                         <outlet property="nameTextField" destination="gax-7y-WId" id="7dh-Kg-PCc"/>
                     </connections>
                 </viewController>
