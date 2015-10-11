@@ -14,6 +14,8 @@
 @dynamic  childID;
 @dynamic  eventName;
 @dynamic  eventDescription;
+@dynamic  eventCoordinateLat;
+@dynamic  eventCoordinatelng;
 
 + (NSString *) parseClassName {
     return @"Event";

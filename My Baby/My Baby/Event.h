@@ -15,5 +15,7 @@
 @property (nonatomic) NSString * childID;
 @property (nonatomic) NSString * eventName;
 @property (nonatomic) NSString * eventDescription;
+@property (nonatomic) double eventCoordinateLat;
+@property (nonatomic) double eventCoordinatelng;
 
 @end
