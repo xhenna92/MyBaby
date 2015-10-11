@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "Child.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Parse setApplicationId:@"VZBvodV6x10EUkhtwZSXAnaEwsdmHJgU8H5icchG" clientKey:@"5JWpUc1oqiTsqAqn0c428NIWGHC6Y7AUMc0uPfES"];
+    
+    [Child registerSubclass];
+    
     return YES;
 }
 

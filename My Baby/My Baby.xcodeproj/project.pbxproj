@@ -19,10 +19,11 @@
 		380AE1DA1BC99295005F087F /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1D91BC99295005F087F /* HowToViewController.m */; };
 		380AE1DD1BC99E4C005F087F /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1DC1BC99E4C005F087F /* APIManager.m */; };
 		380AE1E01BC9A1C0005F087F /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1DF1BC9A1C0005F087F /* Video.m */; };
-		D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		D41B30FE1BCA28A30042624D /* AddProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FD1BCA28A30042624D /* AddProfileDetailTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		380AE1E31BCAC372005F087F /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1E21BCAC372005F087F /* Child.m */; };
+		380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1E51BCACA6E005F087F /* ChildAddViewController.m */; };
+		D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */; };
+		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
+		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,13 @@
 		380AE1DC1BC99E4C005F087F /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		380AE1DE1BC9A1C0005F087F /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		380AE1DF1BC9A1C0005F087F /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		380AE1E11BCAC372005F087F /* Child.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Child.h; sourceTree = "<group>"; };
+		380AE1E21BCAC372005F087F /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
+		380AE1E41BCACA6E005F087F /* ChildAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildAddViewController.h; sourceTree = "<group>"; };
+		380AE1E51BCACA6E005F087F /* ChildAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAddViewController.m; sourceTree = "<group>"; };
 		CA3862494A32E9F3DAC51EBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41B30F91BCA224E0042624D /* AddCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCollectionViewCell.h; sourceTree = "<group>"; };
 		D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCollectionViewCell.m; sourceTree = "<group>"; };
-		D41B30FC1BCA28A30042624D /* AddProfileDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProfileDetailTableViewController.h; sourceTree = "<group>"; };
-		D41B30FD1BCA28A30042624D /* AddProfileDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProfileDetailTableViewController.m; sourceTree = "<group>"; };
 		D452E20C1BC9B20A00FCD43C /* ChildCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewCell.h; sourceTree = "<group>"; };
 		D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildCollectionViewCell.m; sourceTree = "<group>"; };
 		D452E20F1BC9B31C00FCD43C /* ChildCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewController.h; sourceTree = "<group>"; };
@@ -179,12 +182,14 @@
 			children = (
 				D41B30F91BCA224E0042624D /* AddCollectionViewCell.h */,
 				D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */,
-				D41B30FC1BCA28A30042624D /* AddProfileDetailTableViewController.h */,
-				D41B30FD1BCA28A30042624D /* AddProfileDetailTableViewController.m */,
 				D452E20C1BC9B20A00FCD43C /* ChildCollectionViewCell.h */,
 				D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */,
 				D452E20F1BC9B31C00FCD43C /* ChildCollectionViewController.h */,
 				D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */,
+				380AE1E11BCAC372005F087F /* Child.h */,
+				380AE1E21BCAC372005F087F /* Child.m */,
+				380AE1E41BCACA6E005F087F /* ChildAddViewController.h */,
+				380AE1E51BCACA6E005F087F /* ChildAddViewController.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -325,13 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41B30FE1BCA28A30042624D /* AddProfileDetailTableViewController.m in Sources */,
 				D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */,
 				380AE1B81BC98E45005F087F /* My_Baby.xcdatamodeld in Sources */,
 				380AE1B51BC98E45005F087F /* AppDelegate.m in Sources */,
 				380AE1DD1BC99E4C005F087F /* APIManager.m in Sources */,
 				380AE1DA1BC99295005F087F /* HowToViewController.m in Sources */,
+				380AE1E31BCAC372005F087F /* Child.m in Sources */,
 				380AE1BB1BC98E45005F087F /* ViewController.m in Sources */,
+				380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */,
 				D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */,
 				380AE1B21BC98E45005F087F /* main.m in Sources */,
 				380AE1E01BC9A1C0005F087F /* Video.m in Sources */,
