@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ChildCollectionViewController.h"
 #import "ChildCollectionViewCell.h"
+#import "AddCollectionViewCell.h"
 
 @interface ChildCollectionViewController ()
 
@@ -24,13 +25,14 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.childrenProfileArray = [[NSMutableArray alloc]init];
-    [self.childrenProfileArray addObject:@"Child 1"];
-    [self.childrenProfileArray addObject:@"Child 2"];
-    [self.childrenProfileArray addObject:@"Child 3"];
-    [self.childrenProfileArray addObject:@"Adpoted Child"];
-    [self.childrenProfileArray addObject:@"Street Child"];
-    [self.childrenProfileArray addObject:@"Random Child"];
+    
     [self.childrenProfileArray addObject:@"+"];
+//    [self.childrenProfileArray insertObject:@"Child 1" atIndex:self.childrenProfileArray.count-1];
+//    [self.childrenProfileArray insertObject:@"Child 2" atIndex:self.childrenProfileArray.count-1];
+//    [self.childrenProfileArray insertObject:@"Child 3" atIndex:self.childrenProfileArray.count-1];
+//    [self.childrenProfileArray insertObject:@"Adpoted Child" atIndex:self.childrenProfileArray.count-1];
+//    [self.childrenProfileArray insertObject:@"Street Child" atIndex:self.childrenProfileArray.count-1];
+//    [self.childrenProfileArray insertObject:@"Random Child" atIndex:self.childrenProfileArray.count-1];
     
     
     // Uncomment the following line to preserve selection between presentations
@@ -55,14 +57,24 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ChildCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChildProfileReusableCell" forIndexPath:indexPath];
     
-    cell.childNameLabel.text = [self.childrenProfileArray objectAtIndex:indexPath.row];
-    cell.childImageView.image = [UIImage imageNamed:@"testbaby"];
-    [cell.childImageView.layer setCornerRadius:75.0];
-    [cell.childImageView.layer setBorderColor:[UIColor blackColor].CGColor];
-    
-    return cell;
+    if (self.childrenProfileArray.count < 2 ) {
+        AddCollectionViewCell *addCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AddProfileReusableCell" forIndexPath:indexPath];
+        addCell.addLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"addProfile"]];
+        [addCell.addLabel.layer setCornerRadius:75.0];
+        [addCell.addLabel.layer setBorderColor:[UIColor greenColor].CGColor];
+        return addCell;
+    } else {
+        ChildCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChildProfileReusableCell" forIndexPath:indexPath];
+        
+        cell.childNameLabel.text = [self.childrenProfileArray objectAtIndex:indexPath.row];
+        cell.childImageView.image = [UIImage imageNamed:@"testbaby"];
+        
+        
+        [cell.childImageView.layer setCornerRadius:75.0];
+        [cell.childImageView.layer setBorderColor:[UIColor blackColor].CGColor];
+        return cell;
+    }
 }
 
 #pragma mark <UICollectionViewDelegate>
