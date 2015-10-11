@@ -21,6 +21,9 @@
 		380AE1E01BC9A1C0005F087F /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1DF1BC9A1C0005F087F /* Video.m */; };
 		380AE1E31BCAC372005F087F /* Child.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1E21BCAC372005F087F /* Child.m */; };
 		380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1E51BCACA6E005F087F /* ChildAddViewController.m */; };
+		380AE1E91BCAE2F1005F087F /* CreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1E81BCAE2F1005F087F /* CreateEventViewController.m */; };
+		380AE1EC1BCAE466005F087F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1EB1BCAE466005F087F /* Event.m */; };
+		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
@@ -62,6 +65,12 @@
 		380AE1E21BCAC372005F087F /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
 		380AE1E41BCACA6E005F087F /* ChildAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildAddViewController.h; sourceTree = "<group>"; };
 		380AE1E51BCACA6E005F087F /* ChildAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAddViewController.m; sourceTree = "<group>"; };
+		380AE1E71BCAE2F1005F087F /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
+		380AE1E81BCAE2F1005F087F /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
+		380AE1EA1BCAE466005F087F /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		380AE1EB1BCAE466005F087F /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		380AE1F01BCAEC6F005F087F /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
+		380AE1F11BCAEC6F005F087F /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		CA3862494A32E9F3DAC51EBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41B30F91BCA224E0042624D /* AddCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCollectionViewCell.h; sourceTree = "<group>"; };
 		D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCollectionViewCell.m; sourceTree = "<group>"; };
@@ -129,6 +138,12 @@
 				380AE1DC1BC99E4C005F087F /* APIManager.m */,
 				380AE1B91BC98E45005F087F /* ViewController.h */,
 				380AE1BA1BC98E45005F087F /* ViewController.m */,
+				380AE1E71BCAE2F1005F087F /* CreateEventViewController.h */,
+				380AE1E81BCAE2F1005F087F /* CreateEventViewController.m */,
+				380AE1EA1BCAE466005F087F /* Event.h */,
+				380AE1EB1BCAE466005F087F /* Event.m */,
+				380AE1F01BCAEC6F005F087F /* EventListViewController.h */,
+				380AE1F11BCAEC6F005F087F /* EventListViewController.m */,
 				D41B30FF1BCA29D20042624D /* Profile */,
 				380AE1BC1BC98E45005F087F /* Main.storyboard */,
 				380AE1D81BC99295005F087F /* HowToViewController.h */,
@@ -334,7 +349,10 @@
 				380AE1B81BC98E45005F087F /* My_Baby.xcdatamodeld in Sources */,
 				380AE1B51BC98E45005F087F /* AppDelegate.m in Sources */,
 				380AE1DD1BC99E4C005F087F /* APIManager.m in Sources */,
+				380AE1E91BCAE2F1005F087F /* CreateEventViewController.m in Sources */,
 				380AE1DA1BC99295005F087F /* HowToViewController.m in Sources */,
+				380AE1EC1BCAE466005F087F /* Event.m in Sources */,
+				380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */,
 				380AE1E31BCAC372005F087F /* Child.m in Sources */,
 				380AE1BB1BC98E45005F087F /* ViewController.m in Sources */,
 				380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */,

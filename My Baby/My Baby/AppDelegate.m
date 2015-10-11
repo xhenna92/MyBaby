@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "Child.h"
+#import "Event.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
     [Parse setApplicationId:@"VZBvodV6x10EUkhtwZSXAnaEwsdmHJgU8H5icchG" clientKey:@"5JWpUc1oqiTsqAqn0c428NIWGHC6Y7AUMc0uPfES"];
     
     [Child registerSubclass];
+    [Event registerSubclass];
     
     return YES;
 }
