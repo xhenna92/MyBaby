@@ -9,18 +9,36 @@
 #import "EventListViewController.h"
 
 @interface EventListViewController ()
+@property (weak, nonatomic) IBOutlet UIView *containerCalendarView;
+@property (weak, nonatomic) IBOutlet UIView *containerListView;
 
-@property (weak, nonatomic) IBOutlet UIView *calendarSectionView;
-@property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
+
 @end
 
 @implementation EventListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.containerCalendarView.hidden = NO;
+    self.containerListView.hidden = YES;
     // Do any additional setup after loading the view.
 }
 - (IBAction)calendarListSegmentedController:(UISegmentedControl *)sender {
+
+    switch(sender.selectedSegmentIndex){
+        case 0:
+            self.containerCalendarView.hidden = NO;
+            self.containerListView.hidden = YES;
+            break;
+        case 1:
+            
+            self.containerCalendarView.hidden = YES;
+            self.containerListView.hidden = NO;
+
+            break;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

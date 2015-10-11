@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdV-xs-SKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="1020"/>
+            <point key="canvasLocation" x="-682" y="1135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4a8-cg-DeK">
@@ -112,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB7-Xh-pC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="-1083"/>
+            <point key="canvasLocation" x="-584" y="-1563"/>
         </scene>
         <!--Create Event View Controller-->
         <scene sceneID="Uba-Br-LlO">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iu-Vr-2wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="-1095"/>
+            <point key="canvasLocation" x="109" y="-1575"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SNk-ns-N6n">
@@ -205,7 +205,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dp2-Uq-CI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="-256"/>
+            <point key="canvasLocation" x="-2378" y="584"/>
         </scene>
         <!--Kids-->
         <scene sceneID="o4c-D3-mae">
@@ -309,7 +309,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIe-6k-TbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="-419"/>
+            <point key="canvasLocation" x="-584" y="-867"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ytT-iO-7AU">
@@ -326,7 +326,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqc-c4-fkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544" y="-419"/>
+            <point key="canvasLocation" x="104" y="-867"/>
         </scene>
         <!--Child Add View Controller-->
         <scene sceneID="Mub-hM-u2f">
@@ -411,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-BF-d6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2259" y="-419"/>
+            <point key="canvasLocation" x="819" y="-867"/>
         </scene>
         <!--Events-->
         <scene sceneID="DsJ-JL-ig9">
@@ -435,48 +435,44 @@
                                     <action selector="calendarListSegmentedController:" destination="zJs-0s-A49" eventType="valueChanged" id="UFp-BM-hSB"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qwy-UP-OkL">
-                                <rect key="frame" x="16" y="308" width="568" height="243"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kV8-ym-a4b">
-                                <rect key="frame" x="16" y="108" width="568" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="19I-zd-wn7"/>
-                                </constraints>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGd-T7-orm">
+                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <connections>
+                                    <segue destination="NRP-cZ-2FF" kind="embed" id="CP8-W2-cGt"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59a-wo-8nX">
+                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <connections>
+                                    <segue destination="Rxm-B6-KSn" kind="embed" id="qCU-bk-tzW"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kV8-ym-a4b" firstAttribute="top" secondItem="FDb-TM-MTS" secondAttribute="bottom" constant="8" id="1kL-mD-Bd0"/>
-                            <constraint firstItem="kV8-ym-a4b" firstAttribute="leading" secondItem="fck-TL-hSy" secondAttribute="leadingMargin" id="8Tz-fe-ddr"/>
+                            <constraint firstItem="59a-wo-8nX" firstAttribute="leading" secondItem="fck-TL-hSy" secondAttribute="leading" id="5So-L4-z9G"/>
+                            <constraint firstItem="WGd-T7-orm" firstAttribute="leading" secondItem="fck-TL-hSy" secondAttribute="leading" id="5jr-pd-Yg3"/>
                             <constraint firstItem="FDb-TM-MTS" firstAttribute="leading" secondItem="fck-TL-hSy" secondAttribute="leadingMargin" constant="8" id="FkS-Il-ZIK"/>
+                            <constraint firstItem="mP5-ye-lsC" firstAttribute="top" secondItem="59a-wo-8nX" secondAttribute="bottom" id="Hsp-uq-yuh"/>
                             <constraint firstItem="FDb-TM-MTS" firstAttribute="top" secondItem="azm-h5-qZS" secondAttribute="bottom" constant="8" id="JOT-6f-mP2"/>
-                            <constraint firstItem="Qwy-UP-OkL" firstAttribute="top" secondItem="kV8-ym-a4b" secondAttribute="bottom" id="QYf-Gk-spU"/>
-                            <constraint firstItem="Qwy-UP-OkL" firstAttribute="leading" secondItem="fck-TL-hSy" secondAttribute="leadingMargin" id="Zjk-GM-Jge"/>
-                            <constraint firstItem="mP5-ye-lsC" firstAttribute="top" secondItem="Qwy-UP-OkL" secondAttribute="bottom" id="kT9-RK-bMO"/>
-                            <constraint firstItem="Qwy-UP-OkL" firstAttribute="top" secondItem="FDb-TM-MTS" secondAttribute="bottom" constant="8" id="wbb-ed-bgk"/>
+                            <constraint firstAttribute="trailing" secondItem="59a-wo-8nX" secondAttribute="trailing" id="TvW-1x-o7l"/>
+                            <constraint firstAttribute="trailing" secondItem="WGd-T7-orm" secondAttribute="trailing" id="VcB-yf-4XG"/>
+                            <constraint firstItem="WGd-T7-orm" firstAttribute="top" secondItem="FDb-TM-MTS" secondAttribute="bottom" constant="8" id="ciT-ZI-b4y"/>
+                            <constraint firstItem="59a-wo-8nX" firstAttribute="top" secondItem="FDb-TM-MTS" secondAttribute="bottom" constant="8" id="mx2-iK-MvQ"/>
+                            <constraint firstItem="mP5-ye-lsC" firstAttribute="top" secondItem="WGd-T7-orm" secondAttribute="bottom" id="n2u-UD-Jgn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FDb-TM-MTS" secondAttribute="trailing" constant="8" id="y9W-yK-mYI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qwy-UP-OkL" secondAttribute="trailing" id="zjC-Ar-1lr"/>
-                            <constraint firstItem="kV8-ym-a4b" firstAttribute="trailing" secondItem="fck-TL-hSy" secondAttribute="trailingMargin" id="zoz-4f-bTx"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="wbb-ed-bgk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" id="0Md-5k-Jwz"/>
                     <connections>
-                        <outlet property="calendarSectionView" destination="kV8-ym-a4b" id="khp-6W-2mM"/>
-                        <outlet property="eventsTableView" destination="Qwy-UP-OkL" id="Im0-bA-h1v"/>
+                        <outlet property="containerCalendarView" destination="WGd-T7-orm" id="2bc-hc-jH1"/>
+                        <outlet property="containerListView" destination="59a-wo-8nX" id="m3d-7X-XPb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xe2-IJ-531" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856" y="286"/>
+            <point key="canvasLocation" x="-840" y="238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I6Z-PS-tWw">
@@ -493,7 +489,99 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxP-1I-Tbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="-248"/>
+            <point key="canvasLocation" x="-3126" y="592"/>
+        </scene>
+        <!--Events Calendar View Controller-->
+        <scene sceneID="tQo-IU-PMN">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="NRP-cZ-2FF" customClass="EventsCalendarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BB7-2G-aDr"/>
+                        <viewControllerLayoutGuide type="bottom" id="yGi-zY-bU4"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CR8-42-2dd" customClass="JTCalendarMenuView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="443"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXx-YP-z6i" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="5R6-lc-QfK"/>
+                                    <constraint firstAttribute="height" constant="50" id="O3v-8P-Vh5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5R6-lc-QfK"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyp-df-09k" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="-9" y="50" width="600" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Oye-u9-8iQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Oye-u9-8iQ"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nyp-df-09k" secondAttribute="trailing" constant="20" id="7DY-Ot-tcu"/>
+                            <constraint firstAttribute="trailing" secondItem="mXx-YP-z6i" secondAttribute="trailing" id="EXk-08-IQN"/>
+                            <constraint firstItem="yGi-zY-bU4" firstAttribute="top" secondItem="Nyp-df-09k" secondAttribute="bottom" constant="20" id="GsE-LU-OhW"/>
+                            <constraint firstItem="yGi-zY-bU4" firstAttribute="top" secondItem="Nyp-df-09k" secondAttribute="bottom" id="QaI-7i-mtK"/>
+                            <constraint firstItem="Nyp-df-09k" firstAttribute="leading" secondItem="CR8-42-2dd" secondAttribute="leading" constant="20" id="Rd0-nc-vFG"/>
+                            <constraint firstItem="Nyp-df-09k" firstAttribute="top" secondItem="mXx-YP-z6i" secondAttribute="bottom" constant="20" id="SoQ-47-iAE"/>
+                            <constraint firstItem="mXx-YP-z6i" firstAttribute="leading" secondItem="CR8-42-2dd" secondAttribute="leading" id="Uki-pZ-grL"/>
+                            <constraint firstItem="yGi-zY-bU4" firstAttribute="top" secondItem="mXx-YP-z6i" secondAttribute="bottom" id="oPO-wf-BCv"/>
+                            <constraint firstItem="mXx-YP-z6i" firstAttribute="top" secondItem="CR8-42-2dd" secondAttribute="top" id="xQq-J5-O3t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QaI-7i-mtK"/>
+                                <exclude reference="oPO-wf-BCv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="calendarContentView" destination="Nyp-df-09k" id="LpG-93-XWr"/>
+                        <outlet property="calendarMenuView" destination="mXx-YP-z6i" id="ZbD-Et-qSx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awJ-FO-pFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="-92.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="qZY-ra-Vcd">
+            <objects>
+                <tableViewController id="Rxm-B6-KSn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zIn-nX-8dS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="443"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yxQ-7m-Lqx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yxQ-7m-Lqx" id="WeC-fo-jA4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rxm-B6-KSn" id="9s2-UD-ZxO"/>
+                            <outlet property="delegate" destination="Rxm-B6-KSn" id="d1s-pm-dSc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dY-Ni-8xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="526.5"/>
         </scene>
     </scenes>
 </document>
