@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
 @property (nonatomic) NSNumber *heightFt;
 @property (nonatomic) NSNumber *heightIn;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbarPickerView;
+@property (weak, nonatomic) IBOutlet UITextField *songTextField;
 
 
 @end
@@ -31,30 +33,26 @@
     [super viewDidLoad];
     self.feetOptions = [[NSMutableArray alloc] init];
     self.inchesOptions = [[NSMutableArray alloc] init];
-    self.heightIn = 0;
-    self.heightFt = 0;
+    self.heightIn = [[NSNumber alloc]initWithInt:0];
+    self.heightFt = [[NSNumber alloc]initWithInt:0];
     self.heightTextField.delegate = self;
     self.heightPickerView.hidden = true;
+    self.toolbarPickerView.hidden = true;
     self.childDOBDatePicker.datePickerMode = UIDatePickerModeDate;
     
-
-    
-    
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.heightPickerView.frame.size.width, 44)];
-    toolBar.barStyle = UIBarStyleDefault;
-    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneBtnPressToGetValue)];
-    [toolBar setItems:[NSArray arrayWithObject:btn]];
-    [self.heightPickerView addSubview:toolBar];    
-    
-    
+//    self.weightTextField.keyboardType = UIKeyboardTypeNumberPad;
     self.heightPickerView.delegate = self;
     self.heightPickerView.dataSource=self;
     self.heightPickerView.showsSelectionIndicator = YES;
 }
-
-- (void) doneBtnPressToGetValue {
- self.heightPickerView.hidden = true;
+- (IBAction)donePickingHeightTapped:(UIBarButtonItem *)sender {
+    
+    self.heightPickerView.hidden = true;
+    self.toolbarPickerView.hidden = true;
+    [self.heightTextField setText: [NSString stringWithFormat:@"%@ ft %@ in", self.heightFt, self.heightIn] ];
+    
 }
+
 
 #pragma mark - Height Picker View
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -93,7 +91,7 @@
 
 - (NSArray*)getUserDetailsHeightFeetOptions{
     
-    for (int i = 3; i < 8; i++) {
+    for (int i = 0; i < 8; i++) {
         [self.feetOptions addObject:[NSNumber numberWithInt:i]];
     }
     return self.feetOptions;
@@ -111,6 +109,7 @@
 
     [self.view endEditing:YES];
     self.heightPickerView.hidden = false;
+    self.toolbarPickerView.hidden = false;
     return false;
     
 }
@@ -143,6 +142,15 @@
     child.childName = self.nameTextField.text;
     child.childGender = self.gender;
     child.childDOB = self.childDOBString;
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *weightNumber = [f numberFromString:self.weightTextField.text];
+    
+    child.childWeight = weightNumber;
+    child.childHeightFT = self.heightFt;
+    child.childHeightIN = self.heightIn;
+    child.childLullaby = self.songTextField.text;
     [child saveInBackground];
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];

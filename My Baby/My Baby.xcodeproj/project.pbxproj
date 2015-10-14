@@ -26,7 +26,7 @@
 		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */; };
 		D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */; };
-		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		380AE1E11BCAC372005F087F /* Child.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Child.h; sourceTree = "<group>"; };
 		380AE1E21BCAC372005F087F /* Child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Child.m; sourceTree = "<group>"; };
 		380AE1E41BCACA6E005F087F /* ChildAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildAddViewController.h; sourceTree = "<group>"; };
-		380AE1E51BCACA6E005F087F /* ChildAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAddViewController.m; sourceTree = "<group>"; };
+		380AE1E51BCACA6E005F087F /* ChildAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildAddViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		380AE1E71BCAE2F1005F087F /* CreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEventViewController.h; sourceTree = "<group>"; };
 		380AE1E81BCAE2F1005F087F /* CreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEventViewController.m; sourceTree = "<group>"; };
 		380AE1EA1BCAE466005F087F /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
