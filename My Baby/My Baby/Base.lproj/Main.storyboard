@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nyo-xB-PPe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nyo-xB-PPe">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-2x-rbN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-2x-rbN">
                                 <rect key="frame" x="91" y="72" width="481" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-De-ePd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-De-ePd">
                                 <rect key="frame" x="20" y="76" width="63" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-dV-TKM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-dV-TKM">
                                 <rect key="frame" x="20" y="110" width="560" height="433"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,13 +127,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-xy-fRJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="event name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-xy-fRJ">
                                 <rect key="frame" x="24" y="72" width="552" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5B-je-ib6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5B-je-ib6">
                                 <rect key="frame" x="24" y="110" width="552" height="200"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -345,13 +344,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gax-7y-WId">
-                                <rect key="frame" x="28" y="72" width="544" height="30"/>
+                                <rect key="frame" x="24" y="72" width="552" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6jT-0F-oMa">
-                                <rect key="frame" x="0.0" y="151" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="151" width="600" height="162"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="466276388.74317002">
                                     <!--2015-10-11 17:13:08 +0000-->
@@ -361,7 +360,7 @@
                                 </connections>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-zs-PM8">
-                                <rect key="frame" x="225" y="110" width="150" height="29"/>
+                                <rect key="frame" x="24" y="110" width="552" height="29"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="0gk-TE-9Ta"/>
@@ -370,29 +369,88 @@
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0gk-TE-9Ta"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="genderSegmentedControl:" destination="cBc-Y5-chh" eventType="valueChanged" id="5uG-aJ-kCm"/>
                                 </connections>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1eE-O5-blx">
+                                <rect key="frame" x="0.0" y="0.0" width="26" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-Lg-SaA">
+                                <rect key="frame" x="24" y="321" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="WLc-BW-MtI"/>
+                                    <constraint firstAttribute="width" constant="50" id="cNi-jm-a5G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WLc-BW-MtI"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-sX-SZH">
+                                <rect key="frame" x="526" y="321" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Cdi-bn-InF"/>
+                                    <constraint firstAttribute="height" constant="30" id="JZA-xr-mcv"/>
+                                    <constraint firstAttribute="width" constant="203" id="YWy-UB-atH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YWy-UB-atH"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz3-hA-JtI">
+                                <rect key="frame" x="0.0" y="410" width="600" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8jT-Lt-1dc"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2mI-zs-PM8" firstAttribute="top" secondItem="gax-7y-WId" secondAttribute="bottom" constant="8" id="BeQ-RX-qiX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2mI-zs-PM8" secondAttribute="trailing" constant="8" id="7HZ-c2-G9y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2mI-zs-PM8" secondAttribute="trailing" constant="8" id="8hh-58-LpF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DrO-sX-SZH" secondAttribute="trailing" constant="8" id="8if-6g-noH"/>
+                            <constraint firstItem="uz3-hA-JtI" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leading" id="IgK-cI-hX1"/>
+                            <constraint firstItem="iYd-Nr-kzJ" firstAttribute="top" secondItem="uz3-hA-JtI" secondAttribute="bottom" id="Ix4-bg-QW1"/>
                             <constraint firstItem="2mI-zs-PM8" firstAttribute="top" secondItem="gax-7y-WId" secondAttribute="bottom" constant="8" id="Jmm-El-RAy"/>
                             <constraint firstItem="gax-7y-WId" firstAttribute="top" secondItem="sZQ-zl-Sxi" secondAttribute="bottom" constant="8" id="Mhk-XA-U6V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2mI-zs-PM8" secondAttribute="trailing" constant="8" id="N1w-9M-jO0"/>
+                            <constraint firstItem="2mI-zs-PM8" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leadingMargin" constant="8" id="Qlc-YW-YkC"/>
+                            <constraint firstItem="2mI-zs-PM8" firstAttribute="top" secondItem="gax-7y-WId" secondAttribute="bottom" constant="8" id="SAP-Gp-0Qu"/>
+                            <constraint firstItem="DrO-sX-SZH" firstAttribute="top" secondItem="6jT-0F-oMa" secondAttribute="bottom" constant="8" id="T4o-iN-8Vo"/>
                             <constraint firstItem="6jT-0F-oMa" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leading" id="UMI-ev-Eg2"/>
+                            <constraint firstItem="2mI-zs-PM8" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leadingMargin" constant="8" id="XTy-4O-6zf"/>
                             <constraint firstAttribute="trailing" secondItem="6jT-0F-oMa" secondAttribute="trailing" id="ZFc-iu-NqX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gax-7y-WId" secondAttribute="trailing" constant="8" id="mAZ-Yl-SAm"/>
-                            <constraint firstItem="6jT-0F-oMa" firstAttribute="top" secondItem="2mI-zs-PM8" secondAttribute="bottom" constant="13" id="wIz-S8-yk0"/>
+                            <constraint firstItem="6jT-0F-oMa" firstAttribute="top" secondItem="2mI-zs-PM8" secondAttribute="bottom" constant="13" id="r9S-V6-qPg"/>
+                            <constraint firstItem="XfZ-Lg-SaA" firstAttribute="top" secondItem="6jT-0F-oMa" secondAttribute="bottom" constant="8" id="rBb-1y-Gmq"/>
+                            <constraint firstItem="XfZ-Lg-SaA" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leadingMargin" constant="8" id="sGk-0Q-tCh"/>
+                            <constraint firstItem="DrO-sX-SZH" firstAttribute="leading" secondItem="XfZ-Lg-SaA" secondAttribute="trailing" constant="50" id="vdg-gS-TOV"/>
+                            <constraint firstAttribute="trailing" secondItem="uz3-hA-JtI" secondAttribute="trailing" id="yd5-WY-l3k"/>
                             <constraint firstItem="gax-7y-WId" firstAttribute="leading" secondItem="AHj-1L-SGk" secondAttribute="leadingMargin" constant="8" id="yhN-qc-Qn5"/>
-                            <constraint firstItem="2mI-zs-PM8" firstAttribute="centerX" secondItem="AHj-1L-SGk" secondAttribute="centerX" id="zk2-hK-adX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8hh-58-LpF"/>
                                 <exclude reference="Jmm-El-RAy"/>
                                 <exclude reference="N1w-9M-jO0"/>
+                                <exclude reference="Qlc-YW-YkC"/>
+                                <exclude reference="vdg-gS-TOV"/>
                             </mask>
                         </variation>
                     </view>
@@ -410,7 +468,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="childDOBDatePicker" destination="6jT-0F-oMa" id="a9p-QM-jQy"/>
+                        <outlet property="heightPickerView" destination="uz3-hA-JtI" id="lI6-ok-S5X"/>
+                        <outlet property="heightTextField" destination="DrO-sX-SZH" id="QKY-pF-wys"/>
                         <outlet property="nameTextField" destination="gax-7y-WId" id="7dh-Kg-PCc"/>
+                        <outlet property="weightTextField" destination="XfZ-Lg-SaA" id="HHV-xy-1gL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxK-BF-d6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -429,7 +490,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-TM-MTS">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-TM-MTS">
                                 <rect key="frame" x="24" y="72" width="552" height="29"/>
                                 <animations/>
                                 <segments>
