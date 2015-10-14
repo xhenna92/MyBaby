@@ -25,7 +25,6 @@
 		380AE1EC1BCAE466005F087F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1EB1BCAE466005F087F /* Event.m */; };
 		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */; };
-		D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */; };
 		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
@@ -76,8 +75,6 @@
 		380AE1F31BCAF6D2005F087F /* EventsCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCalendarViewController.h; sourceTree = "<group>"; };
 		380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCalendarViewController.m; sourceTree = "<group>"; };
 		CA3862494A32E9F3DAC51EBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D41B30F91BCA224E0042624D /* AddCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCollectionViewCell.h; sourceTree = "<group>"; };
-		D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCollectionViewCell.m; sourceTree = "<group>"; };
 		D43CDC5F1BCB069600DFC44D /* EventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewController.h; sourceTree = "<group>"; };
 		D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewController.m; sourceTree = "<group>"; };
 		D452E20C1BC9B20A00FCD43C /* ChildCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewCell.h; sourceTree = "<group>"; };
@@ -196,8 +193,6 @@
 		D41B30FF1BCA29D20042624D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D41B30F91BCA224E0042624D /* AddCollectionViewCell.h */,
-				D41B30FA1BCA224E0042624D /* AddCollectionViewCell.m */,
 				D452E20C1BC9B20A00FCD43C /* ChildCollectionViewCell.h */,
 				D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */,
 				D452E20F1BC9B31C00FCD43C /* ChildCollectionViewController.h */,
@@ -376,7 +371,6 @@
 				380AE1BB1BC98E45005F087F /* ViewController.m in Sources */,
 				D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */,
 				380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */,
-				D41B30FB1BCA224E0042624D /* AddCollectionViewCell.m in Sources */,
 				380AE1B21BC98E45005F087F /* main.m in Sources */,
 				380AE1E01BC9A1C0005F087F /* Video.m in Sources */,
 				D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */,

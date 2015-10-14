@@ -7,9 +7,10 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 #import "ChildCollectionViewController.h"
 #import "ChildCollectionViewCell.h"
-#import "AddCollectionViewCell.h"
+#import "ChildAddViewController.h"
 
 @interface ChildCollectionViewController ()
 
@@ -25,26 +26,30 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.childrenProfileArray = [[NSMutableArray alloc]init];
-    
+
     [self.childrenProfileArray addObject:@"+"];
-//    [self.childrenProfileArray insertObject:@"Child 1" atIndex:self.childrenProfileArray.count-1];
-//    [self.childrenProfileArray insertObject:@"Child 2" atIndex:self.childrenProfileArray.count-1];
-//    [self.childrenProfileArray insertObject:@"Child 3" atIndex:self.childrenProfileArray.count-1];
-//    [self.childrenProfileArray insertObject:@"Adpoted Child" atIndex:self.childrenProfileArray.count-1];
-//    [self.childrenProfileArray insertObject:@"Street Child" atIndex:self.childrenProfileArray.count-1];
-//    [self.childrenProfileArray insertObject:@"Random Child" atIndex:self.childrenProfileArray.count-1];
     
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
+    [self fetchParseQuery];
+
 }
 
-#pragma mark <UICollectionViewDataSource>
+-(void)fetchParseQuery{
+    PFQuery *query = [PFQuery queryWithClassName:@"Child"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            for (int i = 0; i < objects.count ; i++) {
+                NSMutableDictionary *childInfo = objects[i];
+                NSString *childName = childInfo[@"childName"];
+                [self.childrenProfileArray insertObject:childName atIndex:0];
+            }
+        }
+        [self.collectionView reloadData];
+    }];
+}
+
+#pragma mark - <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 
@@ -58,13 +63,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.childrenProfileArray.count < 2 ) {
-        AddCollectionViewCell *addCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AddProfileReusableCell" forIndexPath:indexPath];
-        addCell.addLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"addProfile"]];
-        [addCell.addLabel.layer setCornerRadius:75.0];
-        [addCell.addLabel.layer setBorderColor:[UIColor greenColor].CGColor];
-        return addCell;
-    } else {
         ChildCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChildProfileReusableCell" forIndexPath:indexPath];
         
         cell.childNameLabel.text = [self.childrenProfileArray objectAtIndex:indexPath.row];
@@ -74,10 +72,18 @@ static NSString * const reuseIdentifier = @"Cell";
         [cell.childImageView.layer setCornerRadius:75.0];
         [cell.childImageView.layer setBorderColor:[UIColor blackColor].CGColor];
         return cell;
-    }
+    
 }
 
-#pragma mark <UICollectionViewDelegate>
+#pragma mark - <UICollectionViewDelegate>
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == self.childrenProfileArray.count - 1) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ChildAddViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildAddVCStoryBoardID"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
