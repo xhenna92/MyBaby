@@ -37,7 +37,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)fetchParseQuery{
     PFQuery *query = [PFQuery queryWithClassName:@"Child"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+    [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         if (!error) {
             for (int i = 0; i < objects.count ; i++) {
                 NSMutableDictionary *childInfo = objects[i];

@@ -16,15 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.calendarContentView.scrollEnabled = YES;
     
-    
-    _calendarManager = [JTCalendarManager new];
-    _calendarManager.delegate = self;
-    
-    [_calendarManager setMenuView:_calendarMenuView];
-    [_calendarManager setContentView:_calendarContentView];
-    [_calendarManager setDate:[NSDate date]];
+
 }
 
 - (void)didReceiveMemoryWarning {
