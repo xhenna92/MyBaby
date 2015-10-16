@@ -25,6 +25,9 @@
 		380AE1EC1BCAE466005F087F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1EB1BCAE466005F087F /* Event.m */; };
 		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */; };
+		D404F8A31BD060050065A653 /* ChildDetailProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D404F8A61BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		D404F8A91BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
@@ -75,6 +78,12 @@
 		380AE1F31BCAF6D2005F087F /* EventsCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCalendarViewController.h; sourceTree = "<group>"; };
 		380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCalendarViewController.m; sourceTree = "<group>"; };
 		CA3862494A32E9F3DAC51EBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D404F8A11BD060050065A653 /* ChildDetailProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildDetailProfileTableViewController.h; sourceTree = "<group>"; };
+		D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildDetailProfileTableViewController.m; sourceTree = "<group>"; };
+		D404F8A41BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildDetailProfileInfoTableViewCell.h; sourceTree = "<group>"; };
+		D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildDetailProfileInfoTableViewCell.m; sourceTree = "<group>"; };
+		D404F8A71BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildDetailProfileMomentsTableViewCell.h; sourceTree = "<group>"; };
+		D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildDetailProfileMomentsTableViewCell.m; sourceTree = "<group>"; };
 		D43CDC5F1BCB069600DFC44D /* EventsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsListTableViewController.h; sourceTree = "<group>"; };
 		D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsListTableViewController.m; sourceTree = "<group>"; };
 		D452E20C1BC9B20A00FCD43C /* ChildCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewCell.h; sourceTree = "<group>"; };
@@ -201,6 +210,12 @@
 				380AE1E21BCAC372005F087F /* Child.m */,
 				380AE1E41BCACA6E005F087F /* ChildAddViewController.h */,
 				380AE1E51BCACA6E005F087F /* ChildAddViewController.m */,
+				D404F8A11BD060050065A653 /* ChildDetailProfileTableViewController.h */,
+				D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */,
+				D404F8A41BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.h */,
+				D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */,
+				D404F8A71BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.h */,
+				D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -365,7 +380,9 @@
 				380AE1E91BCAE2F1005F087F /* CreateEventViewController.m in Sources */,
 				380AE1DA1BC99295005F087F /* HowToViewController.m in Sources */,
 				380AE1EC1BCAE466005F087F /* Event.m in Sources */,
+				D404F8A61BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m in Sources */,
 				380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */,
+				D404F8A91BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m in Sources */,
 				380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */,
 				380AE1E31BCAC372005F087F /* Child.m in Sources */,
 				380AE1BB1BC98E45005F087F /* ViewController.m in Sources */,
@@ -373,6 +390,7 @@
 				380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */,
 				380AE1B21BC98E45005F087F /* main.m in Sources */,
 				380AE1E01BC9A1C0005F087F /* Video.m in Sources */,
+				D404F8A31BD060050065A653 /* ChildDetailProfileTableViewController.m in Sources */,
 				D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
