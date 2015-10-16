@@ -6,73 +6,43 @@
 	<dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>JTCalendar.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>XCDYouTubeKit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C15BDF9917F5A1DCB456C8D2384CFB</key>
+		<key>3C40AD938D23DF5F8345D23B4D3E1644</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CCA33898E587AE27FE4D7B3EF115639</key>
+		<key>3CDAD2D90C4EB5E3244CA53D38D921B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29BCA86E9F565A01E67785AF1FF8F7FE</key>
+		<key>5366B7F679CF2BA31EA583EA35CA2D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3614817132BDCC3416F9AF17C44BA64D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3DDF41ED2D44F52CCC3A5E0AEB89290D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>50B577ECC28B376BC4CDA1B7BCB8DEB8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5FEF815360CFB7929B7C3E89304883A1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>618D68C016EE8A188D0E76DFD3DB0A0A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E87EDB0638D331AB5427ACB5A52F1FFA</key>
+		<key>DACEECE51C5C916318A750A94A717244</key>
 		<dict>
 			<key>primary</key>
 			<true/>

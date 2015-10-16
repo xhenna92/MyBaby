@@ -31,15 +31,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailProfileinfoCellID" forIndexPath:indexPath];
+    UITableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DetailProfileinfoCell2ID" forIndexPath:indexPath];
     
-    
-    return cell;
+    return cell, cell2;
 }
 
 
