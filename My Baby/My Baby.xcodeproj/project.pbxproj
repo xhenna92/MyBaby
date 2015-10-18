@@ -25,9 +25,11 @@
 		380AE1EC1BCAE466005F087F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1EB1BCAE466005F087F /* Event.m */; };
 		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */; };
-		D404F8A31BD060050065A653 /* ChildDetailProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D404F8A61BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		D404F8A91BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		38AC94991BD31BAA00FEBA72 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AC94981BD31BAA00FEBA72 /* EventTableViewCell.xib */; };
+		38AC949C1BD31C3B00FEBA72 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC949B1BD31C3B00FEBA72 /* EventTableViewCell.m */; };
+		D404F8A31BD060050065A653 /* ChildDetailProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */; };
+		D404F8A61BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */; };
+		D404F8A91BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */; };
 		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
@@ -77,6 +79,9 @@
 		380AE1F11BCAEC6F005F087F /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		380AE1F31BCAF6D2005F087F /* EventsCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCalendarViewController.h; sourceTree = "<group>"; };
 		380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCalendarViewController.m; sourceTree = "<group>"; };
+		38AC94981BD31BAA00FEBA72 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		38AC949A1BD31C3B00FEBA72 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		38AC949B1BD31C3B00FEBA72 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		CA3862494A32E9F3DAC51EBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D404F8A11BD060050065A653 /* ChildDetailProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildDetailProfileTableViewController.h; sourceTree = "<group>"; };
 		D404F8A21BD060050065A653 /* ChildDetailProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildDetailProfileTableViewController.m; sourceTree = "<group>"; };
@@ -150,10 +155,13 @@
 				380AE1DC1BC99E4C005F087F /* APIManager.m */,
 				380AE1B91BC98E45005F087F /* ViewController.h */,
 				380AE1BA1BC98E45005F087F /* ViewController.m */,
+				38AC949A1BD31C3B00FEBA72 /* EventTableViewCell.h */,
+				38AC949B1BD31C3B00FEBA72 /* EventTableViewCell.m */,
 				D43CDC5E1BCB058A00DFC44D /* Event */,
 				D41B30FF1BCA29D20042624D /* Profile */,
 				380AE1BC1BC98E45005F087F /* Main.storyboard */,
 				380AE1D81BC99295005F087F /* HowToViewController.h */,
+				38AC94981BD31BAA00FEBA72 /* EventTableViewCell.xib */,
 				380AE1D91BC99295005F087F /* HowToViewController.m */,
 				380AE1DE1BC9A1C0005F087F /* Video.h */,
 				380AE1DF1BC9A1C0005F087F /* Video.m */,
@@ -321,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AC94991BD31BAA00FEBA72 /* EventTableViewCell.xib in Resources */,
 				380AE1BE1BC98E45005F087F /* Main.storyboard in Resources */,
 				380AE1C31BC98E45005F087F /* LaunchScreen.xib in Resources */,
 				380AE1C01BC98E45005F087F /* Images.xcassets in Resources */,
@@ -393,6 +402,7 @@
 				380AE1B81BC98E45005F087F /* My_Baby.xcdatamodeld in Sources */,
 				380AE1B51BC98E45005F087F /* AppDelegate.m in Sources */,
 				380AE1DD1BC99E4C005F087F /* APIManager.m in Sources */,
+				38AC949C1BD31C3B00FEBA72 /* EventTableViewCell.m in Sources */,
 				380AE1E91BCAE2F1005F087F /* CreateEventViewController.m in Sources */,
 				380AE1DA1BC99295005F087F /* HowToViewController.m in Sources */,
 				380AE1EC1BCAE466005F087F /* Event.m in Sources */,

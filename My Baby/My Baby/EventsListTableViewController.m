@@ -8,6 +8,9 @@
 
 #import "EventsListTableViewController.h"
 #import <Parse/Parse.h>
+#import "EventTableViewCell.h"
+#import "Event.h"
+
 
 @interface EventsListTableViewController ()
 
@@ -19,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UINib *cellNib = [UINib nibWithNibName:@"EventTableViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"eventCellIdentifier"];
     self.eventsArray = [[NSMutableArray alloc] init];
     
     
@@ -30,11 +34,11 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
         if (!error) {
-            for (int i = 0; i < objects.count ; i++) {
-                NSMutableDictionary *eventInfo = objects[i];
-                NSString *eventName = eventInfo[@"eventName"];
-                [self.eventsArray insertObject:eventName atIndex:0];
+            
+            for(Event *event in objects){
+                [self.eventsArray addObject: event];
             }
+            
         }
         [self.tableView reloadData];
     }];
@@ -63,12 +67,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCellIdentifier" forIndexPath:indexPath];
-    cell.textLabel.text = [self.eventsArray objectAtIndex:indexPath.row];
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCellIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    Event *event = [self.eventsArray objectAtIndex:indexPath.row];
+    cell.eventNameLabel.text =event.eventName;
+    cell.eventDescriptionLabel.text =event.eventDescription;
+    NSLog(@"%@", event.eventDescription);
+    
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return 150;
 }
 
 /*
