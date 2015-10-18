@@ -35,6 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 }
 
+
 -(void)fetchParseQuery{
     PFQuery *query = [PFQuery queryWithClassName:@"Child"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
@@ -67,10 +68,9 @@ static NSString * const reuseIdentifier = @"Cell";
         
         cell.childNameLabel.text = [self.childrenProfileArray objectAtIndex:indexPath.row];
         cell.childImageView.image = [UIImage imageNamed:@"testbaby"];
-        
-        
-        [cell.childImageView.layer setCornerRadius:75.0];
-        [cell.childImageView.layer setBorderColor:[UIColor blackColor].CGColor];
+        cell.childImageView.layer.cornerRadius = 75.0;
+        cell.childImageView.layer.masksToBounds = YES;
+
         return cell;
     
 }

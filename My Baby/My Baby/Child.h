@@ -21,5 +21,6 @@
 @property (nonatomic) NSNumber * childHeightIN;
 @property (nonatomic) NSString * childLullaby;
 @property (nonatomic) NSString * childDescription;
+@property (nonatomic) PFFile * childImage;
 
 @end

@@ -9,7 +9,7 @@
 #import "ChildAddViewController.h"
 #import "Child.h"
 
-@interface ChildAddViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
+@interface ChildAddViewController () <UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (nonatomic) NSMutableArray * feetOptions;
 @property (nonatomic) NSMutableArray * inchesOptions;
@@ -23,7 +23,8 @@
 @property (nonatomic) NSNumber *heightIn;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbarPickerView;
 @property (weak, nonatomic) IBOutlet UITextField *songTextField;
-
+@property (nonatomic) UIImage *childImage;
+@property (weak, nonatomic) IBOutlet UIButton *pictureChooseButton;
 
 @end
 
@@ -52,7 +53,30 @@
     [self.heightTextField setText: [NSString stringWithFormat:@"%@ ft %@ in", self.heightFt, self.heightIn] ];
     
 }
+- (IBAction)choosePictureTapped:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    self.childImage = info[UIImagePickerControllerEditedImage];
+    
+    [self.pictureChooseButton setBackgroundImage:self.childImage forState:UIControlStateNormal];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
 
 #pragma mark - Height Picker View
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -138,6 +162,8 @@
 
 - (IBAction)saveChild:(UIBarButtonItem *)sender {
     //send data to parse
+    
+
     Child *child = [[Child alloc] init];
     child.childName = self.nameTextField.text;
     child.childGender = self.gender;
@@ -151,9 +177,21 @@
     child.childHeightFT = self.heightFt;
     child.childHeightIN = self.heightIn;
     child.childLullaby = self.songTextField.text;
-    [child saveInBackground];
     
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    NSData* data = UIImageJPEGRepresentation(self.childImage, 0.5f);
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [child setObject:imageFile forKey:@"childImage"];
+            [child saveInBackground];
+        }
+        else{
+            NSLog(@" did not upload file ");
+        }
+    }];
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

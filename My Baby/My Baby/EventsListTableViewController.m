@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "EventTableViewCell.h"
 #import "Event.h"
+#import "EventDetailViewController.h"
 
 
 @interface EventsListTableViewController ()
@@ -81,6 +82,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return 150;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    EventDetailViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailView"];
+    ivc.eventInfo = [self.eventsArray objectAtIndex:indexPath.row];
+    
+    
+    [self.navigationController pushViewController:ivc animated:YES];
+
 }
 
 /*
