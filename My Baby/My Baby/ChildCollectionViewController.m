@@ -11,6 +11,7 @@
 #import "ChildCollectionViewController.h"
 #import "ChildCollectionViewCell.h"
 #import "ChildAddViewController.h"
+#import "Child.h"
 
 @interface ChildCollectionViewController ()
 
@@ -24,29 +25,38 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.childrenProfileArray = [[NSMutableArray alloc]init];
-
-    [self.childrenProfileArray addObject:@"+"];
-    
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.childrenProfileArray = [[NSMutableArray alloc] init];
     
-    [self fetchParseQuery];
+    [self setUpAndFetchParseQuery];
+    
+    
+    
+
+    
 
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+     [self setUpAndFetchParseQuery];
+}
 
--(void)fetchParseQuery{
+
+-(void)setUpAndFetchParseQuery{
+    
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Child"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         if (!error) {
+            [self.childrenProfileArray removeAllObjects];
+            [self.childrenProfileArray addObject:@"+"];
             for (int i = 0; i < objects.count ; i++) {
-                NSMutableDictionary *childInfo = objects[i];
-                NSString *childName = childInfo[@"childName"];
-                [self.childrenProfileArray insertObject:childName atIndex:0];
+                Child *childInfo = objects[i];
+                [self.childrenProfileArray insertObject:childInfo atIndex:0];
             }
+            [self.collectionView reloadData];
         }
-        [self.collectionView reloadData];
+        
     }];
 }
 
@@ -63,15 +73,34 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-        ChildCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChildProfileReusableCell" forIndexPath:indexPath];
+    ChildCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ChildProfileReusableCell" forIndexPath:indexPath];
+    if (indexPath.row == self.childrenProfileArray.count - 1){
         
-        cell.childNameLabel.text = [self.childrenProfileArray objectAtIndex:indexPath.row];
-        cell.childImageView.image = [UIImage imageNamed:@"testbaby"];
+        cell.childNameLabel.text = @"";
+        cell.childImageView.image = [UIImage imageNamed:@"addChildButton"];
+
+        
+    }
+    else{
+        Child *child = [self.childrenProfileArray objectAtIndex:indexPath.row];
+        cell.childNameLabel.text = child.childName;
+        PFFile *imageFile = child.childImage;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                                                     if (!error) {
+                                                         cell.childImageView.image = [UIImage imageWithData:data];
+                                                     }
+                                                 }];
+
+        
         cell.childImageView.layer.cornerRadius = 75.0;
         cell.childImageView.layer.masksToBounds = YES;
-
-        return cell;
+        
+        
+    
+    }
+    
+    return cell;
+    
     
 }
 
@@ -81,7 +110,8 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.row == self.childrenProfileArray.count - 1) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ChildAddViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildAddVCStoryBoardID"];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
 }
 

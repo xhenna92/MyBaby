@@ -1,2 +1,5 @@
 pod 'XCDYouTubeKit', '~> 2.3'
 pod 'Parse', '~> 1.9'
+pod 'FoldingTabBar', '~> 1.0'
+pod 'NDCollapsiveDatePicker', '~> 0.1'
+pod 'RMPickerViewController', '~> 2.0'

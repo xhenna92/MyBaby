@@ -73,8 +73,6 @@
     Event *event = [self.eventsArray objectAtIndex:indexPath.row];
     cell.eventNameLabel.text =event.eventName;
     cell.eventDescriptionLabel.text =event.eventDescription;
-    NSLog(@"%@", event.eventDescription);
-    
     
     return cell;
 }

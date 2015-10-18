@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JTCalendar.xcscheme</key>
+		<key>FoldingTabBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NDCollapsiveDatePicker-NDCollapsiveDatePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NDCollapsiveDatePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RMActionController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RMPickerViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>XCDYouTubeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C15BDF9917F5A1DCB456C8D2384CFB</key>
+		<key>13DCDA00EB2326C2FAB7F2B9D9DED77D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>147A0BAD3DEE2684DEE5275861E9502C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,37 +67,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29BCA86E9F565A01E67785AF1FF8F7FE</key>
+		<key>374EA8F96EB264812EEB78E96F6AAFF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C40AD938D23DF5F8345D23B4D3E1644</key>
+		<key>88072D52D0D66974CC398F7FF47F3C2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CDAD2D90C4EB5E3244CA53D38D921B2</key>
+		<key>928D88EBB5C1018D133788E18E2EB701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50B577ECC28B376BC4CDA1B7BCB8DEB8</key>
+		<key>B34A83176301D52962E95E14C6FF69AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5366B7F679CF2BA31EA583EA35CA2D90</key>
+		<key>C24C0BE27223D546E461EEDBC003DD9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FEF815360CFB7929B7C3E89304883A1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DACEECE51C5C916318A750A94A717244</key>
+		<key>F5FD668BAE7F784A6768A89FB8844D4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

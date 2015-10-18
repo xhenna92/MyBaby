@@ -32,6 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     self.feetOptions = [[NSMutableArray alloc] init];
     self.inchesOptions = [[NSMutableArray alloc] init];
     self.heightIn = [[NSNumber alloc]initWithInt:0];
@@ -184,6 +186,22 @@
         if (!error) {
             [child setObject:imageFile forKey:@"childImage"];
             [child saveInBackground];
+            
+            if( ! [[NSUserDefaults standardUserDefaults] objectForKey:@"children"] ){
+                NSArray * children = [[NSArray alloc] initWithObjects:child.childName, nil];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:children forKey:@"children"];
+            }
+            else{
+                NSArray *staticChildren = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
+                NSMutableArray * mutableChildren = [[NSMutableArray alloc] initWithArray:staticChildren];
+                [mutableChildren addObject:child.childName];
+                NSArray *finalArray = [[NSArray alloc] initWithArray:mutableChildren];
+                
+                
+                [ [NSUserDefaults standardUserDefaults] setObject:finalArray forKey:@"children"];
+            }
+            
         }
         else{
             NSLog(@" did not upload file ");
@@ -196,7 +214,7 @@
 }
 
 - (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

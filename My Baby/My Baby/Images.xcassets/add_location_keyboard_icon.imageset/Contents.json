@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "addProfile.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "add_location_keyboard_icon.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "add_location_keyboard_icon@2x.png"
     },
     {
       "idiom" : "universal",
