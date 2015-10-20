@@ -20,15 +20,18 @@
 @implementation ChildProfileDetailCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
-- (IBAction)doneButtonTapped:(id)sender {
+
+- (IBAction)doneButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [[self navigationController] setNavigationBarHidden:NO];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-
     
     NSString *childName = @"childName";
     NSArray *moment = @[@"Picture1", @"Picture2", @"Picture3", @"Picture4", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5"];
@@ -114,11 +117,10 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     headerView.headerLabel.backgroundColor = [UIColor redColor];
     
     if (indexPath.section > 0) {
-        NSLog(@"second section");
+        [headerView.doneButton setHidden:YES];
         return headerView;
     } else {
-        NSLog(@"first section");
-        [headerView setHidden:YES];
+        [headerView.headerLabel setHidden:YES];
         return headerView;
     }
 }

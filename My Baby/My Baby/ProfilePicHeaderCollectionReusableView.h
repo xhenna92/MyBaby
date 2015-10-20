@@ -11,5 +11,6 @@
 @interface ProfilePicHeaderCollectionReusableView : UICollectionReusableView
 
 @property (strong, nonatomic) IBOutlet UILabel *headerLabel;
+@property (strong, nonatomic) IBOutlet UIButton *doneButton;
 
 @end
