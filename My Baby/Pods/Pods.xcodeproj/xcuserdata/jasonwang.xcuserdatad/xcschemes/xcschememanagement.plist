@@ -9,12 +9,37 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FoldingTabBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NDCollapsiveDatePicker-NDCollapsiveDatePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NDCollapsiveDatePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RMActionController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RMPickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +52,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>285D93C553FED5A9D1B8F031AD04EC1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3C40AD938D23DF5F8345D23B4D3E1644</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CDAD2D90C4EB5E3244CA53D38D921B2</key>
+		<key>41D1BC1B0A2A6672E40C4497704F4FA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>47E3106647EC0BF2BA1F96E83628241D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DACEECE51C5C916318A750A94A717244</key>
+		<key>725020BEB08FA316863C65625E720095</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9145E070690055EA2D82D264E78B0F71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B50D6559A020FD813CE32D500ECEDC4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B777EF3721AB5A573D4ACF7962036532</key>
 		<dict>
 			<key>primary</key>
 			<true/>

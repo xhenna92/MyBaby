@@ -12,6 +12,7 @@
 #import "ChildCollectionViewCell.h"
 #import "ChildAddViewController.h"
 #import "Child.h"
+#import "ChildProfileDetailCollectionViewController.h"
 
 @interface ChildCollectionViewController ()
 
@@ -107,11 +108,15 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - <UICollectionViewDelegate>
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     if (indexPath.row == self.childrenProfileArray.count - 1) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         ChildAddViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildAddVCStoryBoardID"];
         [self presentViewController:vc animated:YES completion:nil];
         
+    } else {
+        ChildProfileDetailCollectionViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildProfileDtailCollectionVCID"];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 

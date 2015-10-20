@@ -34,6 +34,10 @@
 		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
+		D4F0FAD21BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD11BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D4F0FAD51BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD41BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		D4F0FAD81BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD71BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		D4F0FADB1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,14 @@
 		D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildCollectionViewCell.m; sourceTree = "<group>"; };
 		D452E20F1BC9B31C00FCD43C /* ChildCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewController.h; sourceTree = "<group>"; };
 		D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildCollectionViewController.m; sourceTree = "<group>"; };
+		D4F0FAD01BD6C8770048A54F /* ChildProfileDetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildProfileDetailCollectionViewController.h; sourceTree = "<group>"; };
+		D4F0FAD11BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildProfileDetailCollectionViewController.m; sourceTree = "<group>"; };
+		D4F0FAD31BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildProfileBioCollectionViewCell.h; sourceTree = "<group>"; };
+		D4F0FAD41BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildProfileBioCollectionViewCell.m; sourceTree = "<group>"; };
+		D4F0FAD61BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildProfileMomentsCollectionViewCell.h; sourceTree = "<group>"; };
+		D4F0FAD71BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildProfileMomentsCollectionViewCell.m; sourceTree = "<group>"; };
+		D4F0FAD91BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePicHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePicHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		DD4FC1CD23E02CCB8478CD28 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +239,14 @@
 				D404F8A51BD084C50065A653 /* ChildDetailProfileInfoTableViewCell.m */,
 				D404F8A71BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.h */,
 				D404F8A81BD084FD0065A653 /* ChildDetailProfileMomentsTableViewCell.m */,
+				D4F0FAD01BD6C8770048A54F /* ChildProfileDetailCollectionViewController.h */,
+				D4F0FAD11BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m */,
+				D4F0FAD31BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.h */,
+				D4F0FAD41BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m */,
+				D4F0FAD61BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.h */,
+				D4F0FAD71BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m */,
+				D4F0FAD91BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.h */,
+				D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -262,6 +282,7 @@
 				380AE1A91BC98E45005F087F /* Frameworks */,
 				380AE1AA1BC98E45005F087F /* Resources */,
 				C0C07DA053AF8CC55D3A2598 /* Copy Pods Resources */,
+				32B31C9AA0791F16E3DD2FEC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +371,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32B31C9AA0791F16E3DD2FEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		796F86937DE48D4169B29BCD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +426,7 @@
 				D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */,
 				380AE1B81BC98E45005F087F /* My_Baby.xcdatamodeld in Sources */,
 				380AE1B51BC98E45005F087F /* AppDelegate.m in Sources */,
+				D4F0FAD51BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m in Sources */,
 				380AE1DD1BC99E4C005F087F /* APIManager.m in Sources */,
 				38AC949C1BD31C3B00FEBA72 /* EventTableViewCell.m in Sources */,
 				380AE1E91BCAE2F1005F087F /* CreateEventViewController.m in Sources */,
@@ -402,11 +439,14 @@
 				380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */,
 				380AE1E31BCAC372005F087F /* Child.m in Sources */,
 				380AE1BB1BC98E45005F087F /* ViewController.m in Sources */,
+				D4F0FADB1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m in Sources */,
 				D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */,
+				D4F0FAD81BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m in Sources */,
 				380AE1E61BCACA6E005F087F /* ChildAddViewController.m in Sources */,
 				380AE1B21BC98E45005F087F /* main.m in Sources */,
 				380AE1E01BC9A1C0005F087F /* Video.m in Sources */,
 				D404F8A31BD060050065A653 /* ChildDetailProfileTableViewController.m in Sources */,
+				D4F0FAD21BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m in Sources */,
 				D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
