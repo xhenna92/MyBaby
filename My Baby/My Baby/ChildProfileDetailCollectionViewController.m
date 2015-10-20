@@ -24,9 +24,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+
     
     NSString *childName = @"childName";
     NSArray *moment = @[@"Picture1", @"Picture2", @"Picture3", @"Picture4", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5"];
