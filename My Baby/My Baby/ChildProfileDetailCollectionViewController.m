@@ -20,6 +20,9 @@
 @implementation ChildProfileDetailCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
+- (IBAction)doneButtonTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

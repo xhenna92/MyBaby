@@ -443,7 +443,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileCellID" id="eF3-IC-bnx" customClass="ChildProfileBioCollectionViewCell">
-                                <rect key="frame" x="10" y="100" width="150" height="150"/>
+                                <rect key="frame" x="10" y="164" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -466,7 +466,7 @@
                                 </constraints>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MomentCellID" id="AT6-BH-f4U" customClass="ChildProfileMomentsCollectionViewCell">
-                                <rect key="frame" x="225" y="100" width="150" height="150"/>
+                                <rect key="frame" x="225" y="164" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -490,7 +490,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderViewID" id="nUu-ew-y3A" customClass="ProfilePicHeaderCollectionReusableView">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPl-W2-xCQ">
@@ -514,10 +514,17 @@
                             <outlet property="delegate" destination="RQX-Bd-0bT" id="yVE-zd-dnj"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="cLA-pc-j4l">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="oew-YE-oZA">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="RQX-Bd-0bT" id="goS-yn-rqG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwU-xD-OXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4797" y="-442"/>
+            <point key="canvasLocation" x="-4127" y="-444"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ytT-iO-7AU">
@@ -903,7 +910,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dY-Ni-8xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336" y="-925.5"/>
+            <point key="canvasLocation" x="1148" y="-925.5"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="cXv-Qz-JHI">
@@ -968,7 +975,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zf-Pe-kBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="-946"/>
+            <point key="canvasLocation" x="1791" y="-946"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ydH-WQ-QRa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="alx-gG-YCh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CMU-iw-xHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RQX-Bd-0bT" kind="relationship" relationship="rootViewController" id="H6I-FS-2fA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn8-Zz-zhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4797" y="-444"/>
         </scene>
     </scenes>
     <resources>
