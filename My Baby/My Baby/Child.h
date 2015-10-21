@@ -22,5 +22,6 @@
 @property (nonatomic) NSString * childLullaby;
 @property (nonatomic) NSString * childDescription;
 @property (nonatomic) PFFile * childImage;
+@property (nonatomic) PFFile * momentImage;
 
 @end

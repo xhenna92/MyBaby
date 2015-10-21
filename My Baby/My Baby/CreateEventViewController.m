@@ -131,6 +131,19 @@
     self.childNames = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
     NSLog(@"%@", self.childNames);
     self.eventImage.image = [UIImage imageNamed:@"testbaby"];
+    
+    // grab location
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    
     if(self.childNames.count < 1){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                         message:@"Please Add Children"
@@ -154,17 +167,6 @@
         self.collapsiveDateView.delegate = self;
         [self.view addSubview:self.collapsiveDateView];
         
-        // grab location
-        self.locationManager = [[CLLocationManager alloc]init];
-        self.locationManager.delegate = self;
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        
-        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [self.locationManager requestWhenInUseAuthorization];
-        }
-        
-        [self.locationManager startUpdatingLocation];
     }
 }
 

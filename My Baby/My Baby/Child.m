@@ -19,6 +19,8 @@
 @dynamic childHeightIN;
 @dynamic childLullaby;
 @dynamic childDescription;
+@dynamic childImage;
+@dynamic momentImage;
 
 + (NSString *) parseClassName {
     return @"Child";

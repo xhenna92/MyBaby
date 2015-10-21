@@ -128,7 +128,8 @@
     [self.view endEditing:YES];
     
     NSString * query = self.searchSongTextField.text;
-    NSString *location = [NSString stringWithFormat:@"%@,%@", self.eventLocationLat, self.eventLocationLng];
+    NSString *location = [NSString stringWithFormat:@"%f,%f", self.eventLocationLat, self.eventLocationLng];
+    NSLog(@"%f, %f", self.eventLocationLat, self.eventLocationLng);
     [self makeFSAPIRequestWithSearchTerm:query andLocation:location callbackBlock:^{
          [self.tableView reloadData];
     }];

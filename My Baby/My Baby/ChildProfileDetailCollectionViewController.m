@@ -12,9 +12,11 @@
 #import "ProfilePicHeaderCollectionReusableView.h"
 #import <Parse/Parse.h>
 
-@interface ChildProfileDetailCollectionViewController ()
+@interface ChildProfileDetailCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) NSDictionary *profileData;
+
+@property (nonatomic) NSMutableArray *momentsArray;
 
 
 @end
@@ -28,26 +30,74 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    
+    [self.collectionView reloadData];
     [[self navigationController] setNavigationBarHidden:NO];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+
+    self.profileData = [[NSMutableDictionary alloc] init];
     
-    NSString *childName = @"childName";
-    NSArray *moment = @[@"Picture1", @"Picture2", @"Picture3", @"Picture4", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5"];
-    self.profileData = @{@"childName" : childName, @"moment" :moment };
+    NSString *childName = self.child.childName;
+    
+    self.momentsArray = [[NSMutableArray alloc]init];
+    [self.momentsArray addObject:[UIImage imageNamed:@"addChildButton"]];
+    
+    self.profileData = @{@"childName" : childName, @"moment" :self.momentsArray };
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 #pragma mark <UICollectionViewDataSource>
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1 && indexPath.row == [self.profileData[@"moment"] count]-1) {
+        UIAlertView *photoTypeAlert = [[UIAlertView alloc] initWithTitle:@"Camera or Library Photo" message:@"Please Select One" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Camera", @"Photo Library", nil];
+        [photoTypeAlert show];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            
+            UIAlertView *noCameraAlert = [[UIAlertView alloc] initWithTitle:@"No Camera is Detected" message:@"Please run it on your iPhone device for it to function" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [noCameraAlert show];
+        } else {
+            
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+            [self presentViewController:picker animated:YES completion:NULL];
+        }
+    } else if (buttonIndex == 2){
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.momentsArray setObject:image atIndexedSubscript:0];
+    
+}
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return [self.profileData allKeys].count;
 }
@@ -70,6 +120,7 @@ static NSString * const reuseIdentifier = @"Cell";
         [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error) {
                 cell1.profileImageView.image = [UIImage imageWithData:data];
+                
             }
         }];
 
@@ -83,6 +134,7 @@ static NSString * const reuseIdentifier = @"Cell";
         ChildProfileMomentsCollectionViewCell *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"MomentCellID" forIndexPath:indexPath];
         cell2.momentImageView.image = self.profileData[@"moment"][indexPath.row];
         cell2.backgroundColor = [UIColor whiteColor];
+        cell2.momentImageView.image = self.momentsArray[indexPath.row];
         [cell2.layer setCornerRadius:15];
         return cell2;
     } else {
