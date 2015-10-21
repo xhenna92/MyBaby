@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.childImage = [UIImage imageNamed:@"testbaby"];
     self.feetOptions = [[NSMutableArray alloc] init];
     self.inchesOptions = [[NSMutableArray alloc] init];
     self.heightIn = [[NSNumber alloc]initWithInt:0];
@@ -167,6 +167,15 @@
     
 
     Child *child = [[Child alloc] init];
+    child.childName = @"";
+    child.childGender = @"";
+    child.childDOB = @"";
+    child.childWeight = @0;
+    child.childHeightFT = @0;
+    child.childHeightIN = @0;
+    child.childLullaby = @"";
+    
+    
     child.childName = self.nameTextField.text;
     child.childGender = self.gender;
     child.childDOB = self.childDOBString;

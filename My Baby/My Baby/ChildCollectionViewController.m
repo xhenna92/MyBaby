@@ -116,6 +116,7 @@ static NSString * const reuseIdentifier = @"Cell";
         
     } else {
         ChildProfileDetailCollectionViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildProfileDtailCollectionVCID"];
+        vc.child = self.childrenProfileArray[indexPath.row];
         [self presentViewController:vc animated:YES completion:nil];
     }
 }

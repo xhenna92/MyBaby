@@ -10,10 +10,12 @@
 #import "ChildProfileBioCollectionViewCell.h"
 #import "ChildProfileMomentsCollectionViewCell.h"
 #import "ProfilePicHeaderCollectionReusableView.h"
+#import <Parse/Parse.h>
 
 @interface ChildProfileDetailCollectionViewController ()
 
 @property (nonatomic) NSDictionary *profileData;
+
 
 @end
 
@@ -34,7 +36,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     NSString *childName = @"childName";
-    NSArray *moment = @[@"Picture1", @"Picture2", @"Picture3", @"Picture4", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5"];
+    NSArray *moment = @[@"Picture1", @"Picture2", @"Picture3", @"Picture4", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5", @"Picture5"];
     self.profileData = @{@"childName" : childName, @"moment" :moment };
 }
 
@@ -64,7 +66,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         ChildProfileBioCollectionViewCell *cell1 = [collectionView dequeueReusableCellWithReuseIdentifier:@"ProfileCellID" forIndexPath:indexPath];
-        cell1.profileImageView.image = self.profileData[@"childImage"];
+        PFFile *imageFile = self.child.childImage;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                cell1.profileImageView.image = [UIImage imageWithData:data];
+            }
+        }];
+
+        //cell1.profileImageView.image = self.profileData[@"childImage"];
+        
         [cell1.layer setCornerRadius:75];
         cell1.backgroundColor = [UIColor blueColor];
         return cell1;
@@ -72,7 +82,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.section > 0) {
         ChildProfileMomentsCollectionViewCell *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"MomentCellID" forIndexPath:indexPath];
         cell2.momentImageView.image = self.profileData[@"moment"][indexPath.row];
-        cell2.backgroundColor = [UIColor greenColor];
+        cell2.backgroundColor = [UIColor whiteColor];
         [cell2.layer setCornerRadius:15];
         return cell2;
     } else {
@@ -114,7 +124,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     
     headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderViewID" forIndexPath:indexPath];
     headerView.headerLabel.text = @"Moments";
-    headerView.headerLabel.backgroundColor = [UIColor redColor];
+    headerView.headerLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.376 blue:0.502 alpha:1];
     
     if (indexPath.section > 0) {
         [headerView.doneButton setHidden:YES];

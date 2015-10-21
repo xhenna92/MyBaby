@@ -129,7 +129,7 @@
     [super viewDidLoad];
     
     self.childNames = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
-    
+    self.eventImage.image = [UIImage imageNamed:@"testbaby"];
     if(self.childNames.count < 1){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                         message:@"Please Add Children"
@@ -180,6 +180,14 @@
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     
     Event *event = [[Event alloc]init];
+    
+    event.eventName = @"";
+    event.eventDescription = @"";
+    event.eventCoordinateLat = 0;
+    event.eventCoordinatelng = 0;
+    event.eventDate = @"";
+    event.childID = @"";
+    
     event.eventName = self.eventNameTextField.text;
     event.eventDescription = self.eventDescriptionTextField.text;
     event.eventCoordinateLat = self.eventLocationLat;

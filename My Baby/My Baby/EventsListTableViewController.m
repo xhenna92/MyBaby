@@ -16,6 +16,7 @@
 @interface EventsListTableViewController ()
 
 @property (nonatomic) NSMutableArray *eventsArray;
+@property (nonatomic) NSArray *months;
 
 @end
 
@@ -26,12 +27,14 @@
     UINib *cellNib = [UINib nibWithNibName:@"EventTableViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"eventCellIdentifier"];
     self.eventsArray = [[NSMutableArray alloc] init];
+    self.months = [[NSArray alloc] initWithObjects:@"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December", nil];
     
     
     [self fetchParseQuery];
 }
 
 -(void)fetchParseQuery{
+
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
         if (!error) {
@@ -45,10 +48,6 @@
     }];
 }
 
-
--(void)viewWillAppear:(BOOL)animated {
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,6 +72,13 @@
     Event *event = [self.eventsArray objectAtIndex:indexPath.row];
     cell.eventNameLabel.text =event.eventName;
     cell.eventDescriptionLabel.text =event.eventDescription;
+    NSLog(@"%@", event.eventDate);
+    NSArray *arr = [event.eventDate componentsSeparatedByString:@"-"];
+    NSInteger month = [arr[1] integerValue];
+    month = month -1;
+    cell.eventTimeLabel.text = arr[2];
+    cell.eventMonthLabel.text = [self.months objectAtIndex:month];
+    cell.eventDayLabel.text = arr[0];
     
     return cell;
 }

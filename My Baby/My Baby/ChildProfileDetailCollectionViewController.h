@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Child.h"
 
 @interface ChildProfileDetailCollectionViewController : UICollectionViewController
+
+@property (nonatomic) Child *child;
 
 @end
