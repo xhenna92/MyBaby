@@ -17,5 +17,6 @@
 @property (nonatomic) NSString * eventDescription;
 @property (nonatomic) double eventCoordinateLat;
 @property (nonatomic) double eventCoordinatelng;
+@property (nonatomic) PFFile * eventImage;
 
 @end

@@ -38,22 +38,29 @@ static NSString * const reuseIdentifier = @"Cell";
 
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-     [self setUpAndFetchParseQuery];
-}
-
 
 -(void)setUpAndFetchParseQuery{
     
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"children"];
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"children"]);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Child"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
         if (!error) {
             [self.childrenProfileArray removeAllObjects];
             [self.childrenProfileArray addObject:@"+"];
+            
             for (int i = 0; i < objects.count ; i++) {
                 Child *childInfo = objects[i];
                 [self.childrenProfileArray insertObject:childInfo atIndex:0];
+
+                
+                    NSArray *staticChildren = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
+                    NSMutableArray * mutableChildren = [[NSMutableArray alloc] initWithArray:staticChildren];
+                    [mutableChildren addObject:childInfo.childName];
+                    NSArray *finalArray = [[NSArray alloc] initWithArray:mutableChildren];
+                    
+                    [ [NSUserDefaults standardUserDefaults] setObject:finalArray forKey:@"children"];
             }
             [self.collectionView reloadData];
         }

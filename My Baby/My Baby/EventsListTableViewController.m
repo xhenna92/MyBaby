@@ -72,7 +72,6 @@
     Event *event = [self.eventsArray objectAtIndex:indexPath.row];
     cell.eventNameLabel.text =event.eventName;
     cell.eventDescriptionLabel.text =event.eventDescription;
-    NSLog(@"%@", event.eventDate);
     NSArray *arr = [event.eventDate componentsSeparatedByString:@"-"];
     NSInteger month = [arr[1] integerValue];
     month = month -1;

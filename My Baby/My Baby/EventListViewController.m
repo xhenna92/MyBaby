@@ -10,7 +10,7 @@
 //#import <Parse/Parse.h>
 
 @interface EventListViewController ()
-@property (weak, nonatomic) IBOutlet UIView *containerCalendarView;
+
 @property (weak, nonatomic) IBOutlet UIView *containerListView;
 
 
@@ -20,31 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.containerCalendarView.hidden = YES;
-    self.containerListView.hidden = NO;
 
-//    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//        NSLog(@"%@", objects);
-//    }];
-}
-- (IBAction)calendarListSegmentedController:(UISegmentedControl *)sender {
-
-    switch(sender.selectedSegmentIndex){
-        case 0:
-            self.containerCalendarView.hidden = YES;
-            self.containerListView.hidden = NO;
-            
-            break;
-        case 1:
-            
-            self.containerCalendarView.hidden = NO;
-            self.containerListView.hidden = YES;
-
-            break;
-    }
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

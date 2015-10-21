@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *eventImageView;
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIView *descriptionView;
 
 @end
 
@@ -22,6 +23,14 @@
     
     self.eventNameLabel.text = self.eventInfo.eventName;
     self.eventDescriptionLabel.text = self.eventInfo.eventDescription;
+    PFFile *imageFile = self.eventInfo.eventImage;
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            self.eventImageView.image = [UIImage imageWithData:data];
+        }
+    }];
+    
+    self.descriptionView.layer.cornerRadius = 20;
     
 }
 

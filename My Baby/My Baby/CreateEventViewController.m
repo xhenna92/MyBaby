@@ -129,6 +129,7 @@
     [super viewDidLoad];
     
     self.childNames = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
+    NSLog(@"%@", self.childNames);
     self.eventImage.image = [UIImage imageNamed:@"testbaby"];
     if(self.childNames.count < 1){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
