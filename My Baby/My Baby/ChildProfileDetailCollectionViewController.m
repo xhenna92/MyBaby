@@ -26,6 +26,11 @@
 static NSString * const reuseIdentifier = @"Cell";
 
 - (IBAction)doneButtonTapped:(UIButton *)sender {
+    [PFObject saveAllInBackground:self.momentsArray block:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"-----Array Image Saved to Parse-----");
+        }
+    }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -69,6 +69,7 @@
     self.childImage = info[UIImagePickerControllerEditedImage];
     
     [self.pictureChooseButton setBackgroundImage:self.childImage forState:UIControlStateNormal];
+    [self.pictureChooseButton setTitle:@"" forState:UIControlStateNormal];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

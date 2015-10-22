@@ -24,6 +24,12 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
+-(void)viewWillAppear:(BOOL)animated {
+    [self setUpAndFetchParseQuery];
+    [self.collectionView reloadData];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -31,11 +37,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self setUpAndFetchParseQuery];
     
-    
-    
-
-    
-
 }
 
 
