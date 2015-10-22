@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventMonthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eventDayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *childNameLabel;
 
 @end

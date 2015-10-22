@@ -11,5 +11,6 @@
 @interface Place : NSObject
 @property (nonatomic) NSString * name;
 @property (nonatomic) NSString * address;
+@property (nonatomic) NSString * latlng;
 
 @end

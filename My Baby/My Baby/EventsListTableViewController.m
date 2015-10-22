@@ -78,6 +78,7 @@
     cell.eventTimeLabel.text = arr[2];
     cell.eventMonthLabel.text = [self.months objectAtIndex:month];
     cell.eventDayLabel.text = arr[0];
+    cell.childNameLabel.text = event.childID;
     
     return cell;
 }

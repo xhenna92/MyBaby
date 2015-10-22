@@ -25,18 +25,19 @@
 		380AE1EC1BCAE466005F087F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1EB1BCAE466005F087F /* Event.m */; };
 		380AE1F21BCAEC6F005F087F /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F11BCAEC6F005F087F /* EventListViewController.m */; };
 		380AE1F51BCAF6D2005F087F /* EventsCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */; };
+		383B88EC1BD9567400BBB885 /* placeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383B88EB1BD9567400BBB885 /* placeDetailViewController.m */; };
 		38AC94991BD31BAA00FEBA72 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38AC94981BD31BAA00FEBA72 /* EventTableViewCell.xib */; };
 		38AC949C1BD31C3B00FEBA72 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC949B1BD31C3B00FEBA72 /* EventTableViewCell.m */; };
 		38AC94A21BD328AC00FEBA72 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC94A11BD328AC00FEBA72 /* EventDetailViewController.m */; };
 		D43CDC611BCB069600DFC44D /* EventsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43CDC601BCB069600DFC44D /* EventsListTableViewController.m */; };
 		D452E20E1BC9B20A00FCD43C /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E20D1BC9B20A00FCD43C /* ChildCollectionViewCell.m */; };
 		D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D452E2101BC9B31C00FCD43C /* ChildCollectionViewController.m */; };
-		D460694E1BD7194F00370C2A /* SearchSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D460694D1BD7194F00370C2A /* SearchSongViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D46069551BD7208000370C2A /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = D46069541BD7208000370C2A /* Place.m */; settings = {ASSET_TAGS = (); }; };
-		D4F0FAD21BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD11BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D4F0FAD51BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD41BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		D4F0FAD81BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD71BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		D4F0FADB1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */; settings = {ASSET_TAGS = (); }; };
+		D460694E1BD7194F00370C2A /* SearchSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D460694D1BD7194F00370C2A /* SearchSongViewController.m */; };
+		D46069551BD7208000370C2A /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = D46069541BD7208000370C2A /* Place.m */; };
+		D4F0FAD21BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD11BD6C8770048A54F /* ChildProfileDetailCollectionViewController.m */; };
+		D4F0FAD51BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD41BD6CAC90048A54F /* ChildProfileBioCollectionViewCell.m */; };
+		D4F0FAD81BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FAD71BD6CADB0048A54F /* ChildProfileMomentsCollectionViewCell.m */; };
+		D4F0FADB1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		380AE1F11BCAEC6F005F087F /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		380AE1F31BCAF6D2005F087F /* EventsCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCalendarViewController.h; sourceTree = "<group>"; };
 		380AE1F41BCAF6D2005F087F /* EventsCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCalendarViewController.m; sourceTree = "<group>"; };
+		383B88EA1BD9567400BBB885 /* placeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = placeDetailViewController.h; sourceTree = "<group>"; };
+		383B88EB1BD9567400BBB885 /* placeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = placeDetailViewController.m; sourceTree = "<group>"; };
 		38AC94981BD31BAA00FEBA72 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		38AC949A1BD31C3B00FEBA72 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		38AC949B1BD31C3B00FEBA72 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				D4F0FADA1BD6CF6E0048A54F /* ProfilePicHeaderCollectionReusableView.m */,
 				D460694C1BD7194F00370C2A /* SearchSongViewController.h */,
 				D460694D1BD7194F00370C2A /* SearchSongViewController.m */,
+				383B88EA1BD9567400BBB885 /* placeDetailViewController.h */,
+				383B88EB1BD9567400BBB885 /* placeDetailViewController.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383B88EC1BD9567400BBB885 /* placeDetailViewController.m in Sources */,
 				D452E2111BC9B31C00FCD43C /* ChildCollectionViewController.m in Sources */,
 				380AE1B81BC98E45005F087F /* My_Baby.xcdatamodeld in Sources */,
 				380AE1B51BC98E45005F087F /* AppDelegate.m in Sources */,

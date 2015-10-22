@@ -10,6 +10,7 @@
 #import "APIManager.h"
 #import "Place.h"
 #import <CoreLocation/CoreLocation.h>
+#import "placeDetailViewController.h"
 
 
 
@@ -39,24 +40,55 @@
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
+    
+    
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+        
     }
-    
-    [self.locationManager startUpdatingLocation];
-
-    NSString * query = @"places";
-    NSString *location = [NSString stringWithFormat:@"%f,%f", self.eventLocationLat, self.eventLocationLng];
+    NSString * query = @"child friendly";
+    NSLog(@"%f, %f", self.eventLocationLat, self.eventLocationLng );
+    NSString *location = [NSString stringWithFormat:@"%d,%d", 37, -122];
     [self makeFSAPIRequestWithSearchTerm:query andLocation:location callbackBlock:^{
         [self.tableView reloadData];
     }];
+    
+
+
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+        case kCLAuthorizationStatusRestricted:
+        case kCLAuthorizationStatusDenied:
+        {
+            
+        }
+            break;
+        default:{
+            [self.locationManager startUpdatingLocation];
+        }
+            break;
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    CLLocation *currentLocation = [locations objectAtIndex:0];
+    NSLog(@"%@", currentLocation);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    
+
     self.eventLocationLat = newLocation.coordinate.latitude;
     self.eventLocationLng = newLocation.coordinate.longitude;
+   
     [self.locationManager stopUpdatingLocation];
+    
+    
     
 }
 
@@ -64,6 +96,8 @@
     
     
     NSString *urlString = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?ll=%@&query=%@&client_id=V4EZD2DVUA5S4EW4UWUFJQRCRO3L0QEBRZ2MNOA2IAVF2VXY&client_secret=J1KFSATHO1PDRRLDSQCEBSZ0ULLBVK20YC1WYIN3T53LXXPX&v=20150924", location, searchTerm];
+    
+    //NSLog(@"%@", urlString);
     
     NSString *encodedString = [urlString stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url = [NSURL   URLWithString:encodedString];
@@ -84,6 +118,9 @@
                 NSString *postalCode = [[result objectForKey:@"location"] objectForKey:@"postalCode"];
                 
                 obj.address = [NSString stringWithFormat:@"%@ %@, %@ %@", address, city, state, postalCode];
+                NSString *latitude = [[[result objectForKey:@"location"] objectForKey:@"lat"] stringValue];
+                NSString *longitude = [[[result objectForKey:@"location"] objectForKey:@"lng"] stringValue];
+                obj.latlng = [latitude stringByAppendingString:[NSString stringWithFormat:@",%@", longitude]];
                 
                 [self.places addObject:obj];
             }
@@ -135,12 +172,23 @@
     return YES;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Place * place = [self.places objectAtIndex:indexPath.row];
-    [self dismissViewControllerAnimated:YES completion:nil];
     
+    placeDetailViewController *viewController = [self.navigationController.storyboard instantiateViewControllerWithIdentifier:@"placeDetailVCIdentifier"];
+    viewController.fourSquareObject = [self.places objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
     
 }
+
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    Place * place = [self.places objectAtIndex:indexPath.row];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//    
+//}
 
 
 

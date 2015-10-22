@@ -11,5 +11,6 @@
 @interface ChildProfileMomentsCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *momentImageView;
+@property (weak, nonatomic) IBOutlet UILabel *momentName;
 
 @end

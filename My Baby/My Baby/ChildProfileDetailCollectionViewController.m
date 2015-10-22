@@ -11,12 +11,14 @@
 #import "ChildProfileMomentsCollectionViewCell.h"
 #import "ProfilePicHeaderCollectionReusableView.h"
 #import <Parse/Parse.h>
+#import "Event.h"
 
-@interface ChildProfileDetailCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ChildProfileDetailCollectionViewController () <UINavigationControllerDelegate>
 
-@property (nonatomic) NSDictionary *profileData;
+@property (nonatomic) NSString *childName;
 
 @property (nonatomic) NSMutableArray *momentsArray;
+
 
 
 @end
@@ -26,11 +28,7 @@
 static NSString * const reuseIdentifier = @"Cell";
 
 - (IBAction)doneButtonTapped:(UIButton *)sender {
-    [PFObject saveAllInBackground:self.momentsArray block:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded) {
-            NSLog(@"-----Array Image Saved to Parse-----");
-        }
-    }];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -42,15 +40,12 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-
-    self.profileData = [[NSMutableDictionary alloc] init];
-    
-    NSString *childName = self.child.childName;
     
     self.momentsArray = [[NSMutableArray alloc]init];
-    [self.momentsArray addObject:[UIImage imageNamed:@"addChildButton"]];
     
-    self.profileData = @{@"childName" : childName, @"moment" :self.momentsArray };
+    self.childName = self.child.childName;
+    
+    [self fetchParseQuery];
     
     
 }
@@ -59,46 +54,34 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDataSource>
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 1 && indexPath.row == [self.profileData[@"moment"] count]-1) {
-        UIAlertView *photoTypeAlert = [[UIAlertView alloc] initWithTitle:@"Camera or Library Photo" message:@"Please Select One" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Camera", @"Photo Library", nil];
-        [photoTypeAlert show];
-    }
-}
+//-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//}
 
--(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
+-(void)fetchParseQuery{
     
-    if (buttonIndex == 1) {
-        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
+        if (!error) {
             
-            UIAlertView *noCameraAlert = [[UIAlertView alloc] initWithTitle:@"No Camera is Detected" message:@"Please run it on your iPhone device for it to function" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [noCameraAlert show];
-        } else {
-            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-            [self presentViewController:picker animated:YES completion:NULL];
+            for(Event *event in objects){
+                NSLog(@"%@", event.childID);
+                NSLog(@"%@", self.childName);
+                if([event.childID isEqualToString: self.childName]){
+                    [self.momentsArray addObject: event];
+                }
+            }
+            
+            NSLog(@"%lu", (unsigned long)self.momentsArray.count );
         }
-    } else if (buttonIndex == 2){
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-        
-        [self presentViewController:picker animated:YES completion:NULL];
-    }
+        [self.collectionView reloadData];
+    }];
 }
 
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    [self.momentsArray insertObject:image atIndex:0];
-    
-}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [self.profileData allKeys].count;
+    return 2;
 }
 
 
@@ -107,7 +90,8 @@ static NSString * const reuseIdentifier = @"Cell";
     if (section == 0) {
         return 1;
     } else {
-        return [self.profileData[@"moment"] count];
+        
+        return self.momentsArray.count;
     }
     
 }
@@ -128,10 +112,19 @@ static NSString * const reuseIdentifier = @"Cell";
         return cell1;
     }
     if (indexPath.section > 0) {
+        
         ChildProfileMomentsCollectionViewCell *cell2 = [collectionView dequeueReusableCellWithReuseIdentifier:@"MomentCellID" forIndexPath:indexPath];
-        cell2.momentImageView.image = self.profileData[@"moment"][indexPath.row];
-        cell2.backgroundColor = [UIColor whiteColor];
-        cell2.momentImageView.image = self.momentsArray[indexPath.row];
+        
+        Event *event = [self.momentsArray objectAtIndex:indexPath.row];
+        cell2.momentName.text = event.eventName;
+        PFFile *imageFile = event.eventImage;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                cell2.momentImageView.image = [UIImage imageWithData:data];
+            }
+        }];
+
+
         [cell2.layer setCornerRadius:15];
         return cell2;
     } else {
@@ -145,7 +138,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if (section == 0) {
         return UIEdgeInsetsMake(60, 150, 50, 150);
     } else {
-        return UIEdgeInsetsMake(50, 10, 50, 10);
+        return UIEdgeInsetsMake(50, 10, 0, 10);
     }
 }
 
@@ -155,7 +148,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.section == 0) {
         return CGSizeMake(150, 150);
     } else {
-        return CGSizeMake(100, 100);
+        return CGSizeMake(150, 150);
     }
 }
 

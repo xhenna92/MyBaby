@@ -58,10 +58,13 @@
     YALTabBarItem *item3 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"events_tab_icon"]
                                                       leftItemImage:[UIImage imageNamed:nil]
                                                      rightItemImage:[UIImage imageNamed:@"events_tab_icon"]];
+    YALTabBarItem *item4 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"international12"]
+                                                      leftItemImage:[UIImage imageNamed:nil]
+                                                     rightItemImage:[UIImage imageNamed:@"international12"]];
     
     
     
-    tabBarController.rightBarItems = @[item3];
+    tabBarController.rightBarItems = @[item3, item4];
     
     tabBarController.centerButtonImage = [UIImage imageNamed:@"plus_icon"];
     
