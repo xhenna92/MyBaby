@@ -129,7 +129,6 @@
     [super viewDidLoad];
     
     self.childNames = [[NSUserDefaults standardUserDefaults] objectForKey:@"children"];
-    NSLog(@"%@", self.childNames);
     self.eventImage.image = [UIImage imageNamed:@"testbaby"];
     
     // grab location
@@ -176,9 +175,6 @@
     self.eventLocationLat = newLocation.coordinate.latitude;
     self.eventLocationLng = newLocation.coordinate.longitude;
     [self.locationManager stopUpdatingLocation];
-    NSLog( @"location lat %f, location lat %f",newLocation.coordinate.latitude , newLocation.coordinate.longitude);
-    
-    
 }
 - (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
     
@@ -217,7 +213,6 @@
 }
 
 - (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender {
-    NSLog(@"dismissing");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

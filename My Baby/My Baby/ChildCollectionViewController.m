@@ -45,7 +45,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     PFQuery *query = [PFQuery queryWithClassName:@"Child"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error) {
-        NSLog(@"%@",objects);
         if (!error) {
             [self.childrenProfileArray removeAllObjects];
             [self.childrenProfileArray addObject:@"+"];
@@ -124,7 +123,6 @@ static NSString * const reuseIdentifier = @"Cell";
     } else {
         ChildProfileDetailCollectionViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChildProfileDtailCollectionVCID"];
         vc.child = self.childrenProfileArray[indexPath.row];
-        NSLog(@"vc.child is equal to --- %@", vc.child);
         [self presentViewController:vc animated:YES completion:nil];
     }
 }

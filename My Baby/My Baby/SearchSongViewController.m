@@ -47,7 +47,6 @@
 
     NSString * query = @"places";
     NSString *location = [NSString stringWithFormat:@"%f,%f", self.eventLocationLat, self.eventLocationLng];
-    NSLog(@"%@", location);
     [self makeFSAPIRequestWithSearchTerm:query andLocation:location callbackBlock:^{
         [self.tableView reloadData];
     }];
@@ -129,7 +128,6 @@
     
     NSString * query = self.searchSongTextField.text;
     NSString *location = [NSString stringWithFormat:@"%f,%f", self.eventLocationLat, self.eventLocationLng];
-    NSLog(@"%f, %f", self.eventLocationLat, self.eventLocationLng);
     [self makeFSAPIRequestWithSearchTerm:query andLocation:location callbackBlock:^{
          [self.tableView reloadData];
     }];
@@ -139,7 +137,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Place * place = [self.places objectAtIndex:indexPath.row];
-    NSLog(@"%@", place.name);
     [self dismissViewControllerAnimated:YES completion:nil];
     
     

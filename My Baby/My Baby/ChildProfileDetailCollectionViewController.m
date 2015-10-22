@@ -30,7 +30,6 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    
     [self.collectionView reloadData];
     [[self navigationController] setNavigationBarHidden:NO];
 }
@@ -64,38 +63,33 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    
     if (buttonIndex == 1) {
         if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             
             UIAlertView *noCameraAlert = [[UIAlertView alloc] initWithTitle:@"No Camera is Detected" message:@"Please run it on your iPhone device for it to function" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            
             [noCameraAlert show];
         } else {
-            
-            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-            picker.delegate = self;
-            picker.allowsEditing = YES;
             picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-            
             [self presentViewController:picker animated:YES completion:NULL];
         }
     } else if (buttonIndex == 2){
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
         picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
         
         [self presentViewController:picker animated:YES completion:NULL];
     }
 }
 
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [self dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [self.momentsArray setObject:image atIndexedSubscript:0];
+    
+    [self.momentsArray insertObject:image atIndex:0];
     
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -123,8 +117,6 @@ static NSString * const reuseIdentifier = @"Cell";
                 
             }
         }];
-
-        //cell1.profileImageView.image = self.profileData[@"childImage"];
         
         [cell1.layer setCornerRadius:75];
         cell1.backgroundColor = [UIColor blueColor];
@@ -172,19 +164,23 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
-    ProfilePicHeaderCollectionReusableView *headerView = [[ProfilePicHeaderCollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, self.collectionView.frame.size.width, 20)];
-    
-    headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderViewID" forIndexPath:indexPath];
-    headerView.headerLabel.text = @"Moments";
-    headerView.headerLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.376 blue:0.502 alpha:1];
-    
-    if (indexPath.section > 0) {
-        [headerView.doneButton setHidden:YES];
-        return headerView;
-    } else {
-        [headerView.headerLabel setHidden:YES];
-        return headerView;
+    ProfilePicHeaderCollectionReusableView *headerView = [[ProfilePicHeaderCollectionReusableView alloc]init];
+    if (kind == UICollectionElementKindSectionHeader) {
+        headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderViewID" forIndexPath:indexPath];
+        headerView.headerLabel.text = @"Moments";
+        headerView.headerLabel.backgroundColor = [UIColor colorWithRed:0.992 green:0.376 blue:0.502 alpha:1];
     }
+    
+        if (indexPath.section > 0) {
+            [headerView.doneButton setHidden:YES];
+            [headerView.headerLabel setHidden:NO];
+            return headerView;
+        } else {
+            [headerView.headerLabel setHidden:YES];
+            [headerView.doneButton setHidden:NO];
+            return headerView;
+        }
+
 }
 
 #pragma mark <UICollectionViewDelegate>
